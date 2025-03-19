@@ -1,0 +1,38 @@
+// BURGER
+
+public enum NPCSpriteEnum
+{
+    Transparent,
+    FriesManagerPose0,
+    FriesManagerPose1,
+    JollyWorkerPose0Angry,
+    JollyWorkerPose0Happy,
+    JollyWorkerPose0Neutral,
+    JollyWorkerPose0Suspicious,
+    JollyWorkerPose1Angry,
+    JollyWorkerPose1Happy,
+    JollyWorkerPose1Neutral,
+    JollyWorkerPose1Suspicious,
+    KittyEmployeePose0Happy,
+    KittyEmployeePose0Neutral,
+    KittyEmployeePose0Surprised,
+    KittyEmployeePose1Happy,
+    KittyEmployeePose1Neutral,
+    KittyEmployeePose1Surprised,
+    NanaPose0Angry,
+    NanaPose0Happy,
+    NanaPose0Neutral,
+    NanaPose0Surprised,
+    NanaPose1Angry,
+    NanaPose1Happy,
+    NanaPose1Neutral,
+    NanaPose1Surprised,
+    RatWorkerPose0,
+    RatWorkerPose1,
+    SpaghettiWorkerPose0Angry,
+    SpaghettiWorkerPose0Happy,
+    SpaghettiWorkerPose0Neutral,
+    SpaghettiWorkerPose1Angry,
+    SpaghettiWorkerPose1Happy,
+    SpaghettiWorkerPose1Neutral
+}

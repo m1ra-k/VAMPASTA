@@ -1,0 +1,1979 @@
+{
+    "dialogues": [
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG1",                
+                "dialogue": "And then when it went like baaaaam, whoosh, I was all like... woah!! Wooooooah!!!!!!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG1",                
+                "dialogue": "Haha, right! I liked that part too.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG1",                
+                "dialogue": "Wow, that really was such a good movie. Right? Right?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG1",                
+                "dialogue": "Yeah, it kept me on edge a crazy number of times.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG1",                
+                "dialogue": "Man~ that was really fun. Thanks for taking me out tonight, <color=#FFC0CB>Ravi</color>.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "I just really wish we could do this more often.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "It's hard for us to get our schedules to match nowadays...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "With your restaurant and my day job... the only time that works is late at night, huh.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "The world is so cruel!!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "It's okay, I'm just glad we have this time to ourselves.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "Speaking of time, it's getting pretty late isn't it?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "Yeah, you're right... is it time for me to head back home?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "Wait, before that, how about I cook up something for us real quick?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "Ah, you're the best! I could really go for some pasta right now.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "That's a bit heavy, don't you think?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "Hey!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "I'm kidding, I'm kidding.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG2",                
+                "dialogue": "That's more like it.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "That reminds me, one of my regulars has been coming extra often for dinner lately.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Oh really?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Yeah. Some kid. I think his name is... <color=green>Mateo</color>? Probably? Most likely.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "He eats a lot.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "And keeps ordering the most garlic-y dishes.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Haha! You'd hate it, the smell is quite strong, even for me.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Yuuuup, that's a 100% no for me.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Understandably so.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Still, it's nice having a familiar face stop by.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "That's sweet. He must really like you!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Haha, you think?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Have you known him for some time now?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Yeah, I think it's been a couple of years now?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Wow! So loyal!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Not as loyal as you, <color=red>Lan</color>.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "Hehe.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",                
+                "dialogue": "You know...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",
+                "dialogue": "Mm?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",
+                "dialogue": "Is it alright if we take a picture, just this once?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG3",
+                "dialogue": "I just want to preserve this memory of us. I had a really good time.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG4",
+                "dialogue": "Ah...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG4",
+                "dialogue": "Is it still a no?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG4",
+                "dialogue": "I'm sorry, <color=#FFC0CB>Ravi</color>, you know it's just... I'm so camera shy...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG4",
+                "dialogue": "It's totally okay, I won't press! It's alright.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG4",
+                "dialogue": "Thank you...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG4",
+                "dialogue": "...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG4",
+                "dialogue": "...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG5",
+                "dialogue": "(God it's awkward now! I'm a dumbass oh god...)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG5",
+                "dialogue": "(I knew the answer. It's always the same.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG5",
+                "dialogue": "(But isn't it weird?)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG5",
+                "dialogue": "(We've been dating all these years, yet we don't have a single photo together.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG5",
+                "dialogue": "(Whatever, that's not important, now she's just uncomfortable.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG5",
+                "dialogue": "(I'm such an asshole--)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG6",
+                "dialogue": "(?)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG6",
+                "dialogue": "Look, <color=#FFC0CB>Ravi</color>, there's something I've been meaning to tell you...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG6",
+                "dialogue": "It's just. A bit hard for me to say.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG6",
+                "dialogue": "(A bright light...)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG7",
+                "dialogue": "?!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG7",
+                "dialogue": "<color=red>Lan</color>, watch out!!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG8",
+                "dialogue": "!?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "None",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG0",
+                "dialogue": "BAM!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "None",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG0",
+                "dialogue": "...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG9",
+                "dialogue": "(Oh my god... my vision is so blurry...)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG9",
+                "dialogue": "(A hit-and-run... this late at night?)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG9",
+                "dialogue": "(Shit, I'm losing way too much blood.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG10",
+                "dialogue": "<color=red>Lan</color>... *urk*",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG11",
+                "dialogue": "Are you... there?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG12",
+                "dialogue": "I'm right here.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG13",
+                "dialogue": "It's okay. I'm [?????].",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG13",
+                "dialogue": "Thank god.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG13",
+                "dialogue": "<color=red>Lan</color>...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG14",
+                "dialogue": "Quick... *huff*",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG14",
+                "dialogue": "Call for... call... for an ambulance...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG15",
+                "dialogue": "...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG15",
+                "dialogue": "So this is my [?????].",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG15",
+                "dialogue": "I'm [?????], <color=#FFC0CB>Ravi</color>.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Lan",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG15",
+                "dialogue": "This is my way of [?????] you.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "None",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG0",
+                "dialogue": "---DAYS LATER---",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "Did I get dumped?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(I don't have any memory of what happened after that night.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(I passed out from impact, and the next time I woke up, I was in my bed.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(It's been a couple of days, and I still haven't heard back from <color=red>Lan</color>.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(I should have injuries from where I got hit but... it's all gone.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "God, I really can't believe this is happening.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(So my girlfriend. Ex-girlfriend? Was actually a vampire.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(And after seeing me covered in blood, she bit me.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(Which I guess makes me a vampire too?)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(I just can't believe I haven't noticed up until this point.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(I didn't take <color=red>Lan</color> as a good actress.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(Hell, she could barely lie when she tried surprising me for our anniversary.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(But I guess this whole time we were dating... was all just one big act.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(...)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(Did she really love me?)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "My head just can't keep up.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "Whatever, there's no point in... thinking about that now.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "I need to focus on what's next.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "I don't even have a reflection... I really am a vampire now, huh?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG16",
+                "dialogue": "(This is all so surreal.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG0",
+                "dialogue": "(I ended up staying in since then.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG0",
+                "dialogue": "(Walking near the windows while the sun was still out burned my skin pretty bad,)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG0",
+                "dialogue": "(even though I wasn't directly in the light.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(But speaking of windows,)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(I've seen the same regular waiting outside the restaurant every night.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(He knocks on the door a couple of times...)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(waits across the restaurant for a bit...)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(and heads home.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(God, why can't he take a hint? The lights are all off, does the restaurant look open?)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(Does he really want pasta that badly?)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(There are so many other places that he could be eating instead...)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(It's not like this town is lacking in options.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(Anyways, going outside is definitely out of the question. At least, in the day.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(And my sense of taste is completely screwed.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(Real food tastes like shit to me and doesn't satisfy my hunger.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "None",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "KNOCK KNOCK.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(So I've been... insanely hungry.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(I just don't know how to quench it.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "None",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "KNOCK KNOCK KNOCK.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(Well, I'd be lying if I said that I didn't have an idea of how to quench it.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "None",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "KNOCK KNOCK KNOCK KNOCK KNOCK.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "(But I really don't want to go down that route. If I can avoid it at all costs--)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "None",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG17",
+                "dialogue": "KNOCK KNOCK KNOCK KNOCK KNOCK KNOCK KNOCK KNOCK KNOCK KNOCK.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG18",
+                "dialogue": "God, what the actual hell!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG18",
+                "dialogue": "I can't keep ignoring him... I'll just suck it up for today and figure out what gives.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG19",
+                "dialogue": "<color=#FFC0CB>Chef Romano</color>.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG19",
+                "dialogue": "<color=green>Mateo</color>, right? So you're here again today.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG19",
+                "dialogue": "Look, we're closed. It says so on the sign in the front. Why do you keep showing up?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG19",
+                "dialogue": "Well,",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG19",
+                "dialogue": "why have you been closed for over a week?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG19",
+                "dialogue": "You know I have dinner every night here, right?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG19",
+                "dialogue": "Who else is there to take responsibility but you?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG19",
+                "dialogue": "You...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG19",
+                "dialogue": "... Whatever. Come in and tell me what you want.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "You're wearing a turtleneck today.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "Huh? Oh. Yeah. I'm surprised you noticed a difference.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "I mean, it's not like I come here every day or anything.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "What's the occasion?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "Nothing. I'm just... a little cold, that's all.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "Really? In the freezing month of July?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "You have a lot of sass for a kid. May I take your order please.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "I'm not a kid. To start, I'll have a plate of Penne all'Arrabbiata.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG20",
+                "dialogue": "(That isn't a starter, that's a full meal...)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1,
+            "endOfScene": true
+        }
+    ]
+}
