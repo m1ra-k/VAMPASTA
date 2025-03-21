@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameProgressionManager : MonoBehaviour
 {
@@ -45,6 +42,7 @@ public class GameProgressionManager : MonoBehaviour
     {        
         if (GameProgressionManagerInstance == null)
         {
+            print("ayo");
             Application.targetFrameRate = 60;
             GameProgressionManagerInstance = this;
             DontDestroyOnLoad(gameObject);
@@ -128,7 +126,7 @@ public class GameProgressionManager : MonoBehaviour
             case "CookingGame":
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "CookingGame");
                 transitioning = true;
-                StartCoroutine(PlayMusic(2));
+                StopMusic();
                 break;
         }
     }
@@ -138,7 +136,7 @@ public class GameProgressionManager : MonoBehaviour
         audioSourceBGM.Pause();
     }
 
-    IEnumerator PlayMusic(int index)
+    public IEnumerator PlayMusic(int index, float waitTime = 0.5f, GameObject gameObjectToDeactivate = null)
     {
         float startVolume = audioSourceBGM.volume;
 
@@ -151,7 +149,12 @@ public class GameProgressionManager : MonoBehaviour
         audioSourceBGM.volume = 0;
         audioSourceBGM.Pause();
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(waitTime);
+
+        if (gameObjectToDeactivate)
+        {
+            gameObjectToDeactivate.SetActive(false);
+        }
 
         audioSourceBGM.volume = 1;
         audioSourceBGM.UnPause();
