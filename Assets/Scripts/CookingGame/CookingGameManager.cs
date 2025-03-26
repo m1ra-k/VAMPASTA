@@ -68,7 +68,6 @@ public class CookingGameManager : MonoBehaviour
             }
             else
             {
-                print("ok");
                 beatmapList.Add(new List<ApproachCircleTypeEnum?> { ApproachCircleTypeEnum.Skip });
             }
         }
