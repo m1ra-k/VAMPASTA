@@ -80,7 +80,7 @@ public class GameProgressionManager : MonoBehaviour
                 ravi = GameObject.FindWithTag("Player");
                 if (previousScene.Equals("CookingGame"))
                 {
-                    ravi.transform.position = new Vector2(300, -65);
+                    ravi.transform.localPosition = new Vector2(-300, -65);
                 }
                 break;
 
