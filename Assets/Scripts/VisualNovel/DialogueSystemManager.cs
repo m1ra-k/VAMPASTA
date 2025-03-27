@@ -108,7 +108,7 @@ public class DialogueSystemManager : MonoBehaviour
             if (currentDialogue.endOfScene && !transitioningScene)
             {
                 transitioningScene = true;
-                GameProgressionManager.TransitionScene(true);
+                GameProgressionManager.TransitionScene("play");
             }
             else if (!currentDialogue.endOfScene && !typeWriterInEffect && !finishedDialogue && choiceBoxes.transform.childCount == 0) 
             {

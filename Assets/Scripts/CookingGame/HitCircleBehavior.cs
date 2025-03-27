@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,87 +6,85 @@ using UnityEngine;
 
 public class HitCircleBehavior : MonoBehaviour
 {
-    public Transform largestChildTransform;
+    public Transform closestChildTransform;
     public TextMeshProUGUI hitJudgement;
+    public string circleType;
 
-    private SortedDictionary<float, Transform> approachCircleChildrenSorted = new SortedDictionary<float, Transform>();
+    private HitCircle hitCircle;
+    private CookingGameManager cookingGameManager;
     private Coroutine updateHitJudgementCoroutine;
-    private float maxScale = 1.20f;
+    private Queue<GameObject> approachCirclesQueue;
 
-    public void ButtonClicked()
+    private object lockObject = new object(); 
+
+    public void Start()
     {
-        if (largestChildTransform != null)
+        cookingGameManager = FindObjectOfType<CookingGameManager>();
+
+        switch (circleType)
         {
-            DestroyLargestApproachCircleChild();
-            DetermineScore();
+            case "food":
+                approachCirclesQueue = cookingGameManager.approachCircleFoodQueue;
+                break;
+
+            case "garlic":
+                approachCirclesQueue = cookingGameManager.approachCircleGarlicQueue;
+                break;
         }
     }
 
-    public void UpdateApproachCircleChildrenSorted(Transform approachCircleChildTransform)
+    public void ButtonClicked()
     {
-        if (approachCircleChildTransform == null || approachCircleChildTransform.gameObject == null)
+        if (closestChildTransform != null)
         {
-            return;
+            print("tried to destroy the closest child");
+            DestroyLargestApproachCircleChild();
         }
+    }
 
-        float scaleMagnitude = approachCircleChildTransform.localScale.magnitude;
-
-        // log n
-        if (approachCircleChildTransform.localScale.x >= maxScale)
+    public void Update()
+    {
+        if (approachCirclesQueue.Count != 0)
         {
-            approachCircleChildrenSorted.Remove(scaleMagnitude);
-            
-            if (largestChildTransform == approachCircleChildTransform)
-            {
-                largestChildTransform = null;
-            }
-            
+            UpdateApproachCircleChildrenSorted();
+        }
+    }
+
+    public void UpdateApproachCircleChildrenSorted()
+    {
+        if (approachCirclesQueue.Peek().transform.position.y < 120f)
+        {
+            GameObject missed = approachCirclesQueue.Dequeue();
+            print($"missed {missed.name}");
             updateHitJudgementCoroutine = StartCoroutine(UpdateHitJudgement("miss"));
-            
-            Destroy(approachCircleChildTransform.gameObject);
-            return;
+            RemoveHeart();
+            closestChildTransform = null;
         }
-
-        // log n
-        if (approachCircleChildrenSorted.ContainsKey(scaleMagnitude))
+        else
         {
-            approachCircleChildrenSorted.Remove(scaleMagnitude);
-        }
-        
-        approachCircleChildrenSorted.Add(scaleMagnitude, approachCircleChildTransform);
-
-        if (largestChildTransform == null || scaleMagnitude > largestChildTransform.localScale.magnitude)
-        {
-            largestChildTransform = approachCircleChildTransform;
+            closestChildTransform = approachCirclesQueue.Peek().transform;
         }
     }
 
     void DestroyLargestApproachCircleChild()
     {
-        Destroy(largestChildTransform.gameObject);
-    }
-
-    void DetermineScore()
-    {
-        float uniformScale = largestChildTransform.localScale.x;
-
-        if (updateHitJudgementCoroutine != null)
+        Destroy(closestChildTransform.gameObject);
+        GameObject got = approachCirclesQueue.Dequeue();
+        if (got.transform.position.y < 190f) // y is
         {
-            StopCoroutine(updateHitJudgementCoroutine);
-        }
-
-        if (uniformScale < 0.70f || uniformScale >= maxScale)
-        {
+            print($"got {got.name}");
             updateHitJudgementCoroutine = StartCoroutine(UpdateHitJudgement("hit"));
         }
-        else if (uniformScale >= 0.70 && uniformScale < 0.80)
+        else
         {
+            print($"missed {got.name} at {got.transform.position.y}");
             updateHitJudgementCoroutine = StartCoroutine(UpdateHitJudgement("miss"));
-            // TODO MINUS HEART
+            RemoveHeart();
         }
+        closestChildTransform = null;
     }
 
-    IEnumerator UpdateHitJudgement(string newHitJudgement)
+    private IEnumerator UpdateHitJudgement(string newHitJudgement)
     {
         hitJudgement.text = newHitJudgement;
 
@@ -96,11 +95,23 @@ public class HitCircleBehavior : MonoBehaviour
         updateHitJudgementCoroutine = null;
     }
 
-    class ApproachCircleChildrenComparer : IComparer<Transform>
+    private void RemoveHeart()
     {
-        public int Compare(Transform a, Transform b)
+        try
         {
-            return b.localScale.magnitude.CompareTo(a.localScale.magnitude);
+            lock (lockObject)
+            {
+                if (cookingGameManager.hearts.Count > 0)
+                {
+                    GameObject heart = cookingGameManager.hearts[cookingGameManager.hearts.Count - 1];
+                    cookingGameManager.hearts.RemoveAt(cookingGameManager.hearts.Count - 1);
+                    Destroy(heart);
+                }
+            }
+        }
+        catch (Exception)
+        {
+            Debug.Log("not letting happen");
         }
     }
 }

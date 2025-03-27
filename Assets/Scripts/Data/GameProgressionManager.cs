@@ -15,10 +15,14 @@ public class GameProgressionManager : MonoBehaviour
 
     [Header("[Moment]")]
     public int sceneNumber;
+    public string previousScene;
 
     [Header("[Player]")]
     public GameObject ravi;
     public bool transitioning;
+
+    [Header("[Cooking Game]")]
+    private CookingGameManager cookingGameManager;
 
     [Header("[Music]")]
     public List<AudioClip> audioClips = new List<AudioClip>();
@@ -72,35 +76,70 @@ public class GameProgressionManager : MonoBehaviour
         switch (currentScene)
         {
             case "RestaurantOverworld":
+                transitioning = false;
                 ravi = GameObject.FindWithTag("Player");
+                if (previousScene.Equals("CookingGame"))
+                {
+                    ravi.transform.position = new Vector2(300, -65);
+                }
                 break;
 
             case "CookingGame":
                 transitioning = false;
+                cookingGameManager = FindObjectOfType<CookingGameManager>();
                 break;
-        }
-        
+
+            case "GameOver":
+                transitioning = false;
+                break;
+        }     
     }
 
     void Update()
     {
-        if (currentScene.Equals("RestaurantOverworld") && ravi.transform.position.x < 15)
+        if (!transitioning)
         {
-            TransitionScene();
+            if (currentScene.Equals("RestaurantOverworld") )
+            {
+                print($"ravi position is {ravi.transform.position}");
+                // go to cooking game if ravi goes through door
+                if (ravi.transform.position.x < 15)
+                {
+                    TransitionScene();
+                    previousScene = "RestaurantOverworld";
+                }
+                // TODO: go to visual novel if set down plate
+            }
+            else if (currentScene.Equals("CookingGame"))
+            {
+                if (cookingGameManager.hearts.Count == 0)
+                {
+                    TransitionScene("lost");
+                    previousScene = "CookingGame";
+                }
+                else if (cookingGameManager.finishedCooking)
+                {
+                    TransitionScene();
+                    previousScene = "CookingGame";
+                }
+            }
         }
-
     }
 
     // TODO get rid of flag soon
-    public void TransitionScene(bool possibleFlag = false)
+    public void TransitionScene(string possibleFlag = "")
     {
         string sceneType = "";
 
         // not true always tho hmm
-        if (possibleFlag)
+        if (possibleFlag.Equals("play"))
         {
             sceneNumber += 1;
             sceneType = sceneProgressionLookup[sceneNumber][0];
+        }
+        else if (possibleFlag.Equals("lost"))
+        {
+            sceneType = "GameOver";
         }
         else
         {
@@ -120,11 +159,18 @@ public class GameProgressionManager : MonoBehaviour
             // TODO? focus on VisualNovel for now
             case "RestaurantOverworld":
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "RestaurantOverworld");
+                transitioning = true;
                 StartCoroutine(PlayMusic(0));
                 break;
 
             case "CookingGame":
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "CookingGame");
+                transitioning = true;
+                StopMusic();
+                break;
+
+            case "GameOver":
+                fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "GameOver");
                 transitioning = true;
                 StopMusic();
                 break;
@@ -171,6 +217,6 @@ public class GameProgressionManager : MonoBehaviour
     // BUTTONS - TODO MOVE
     public void PlayGame()
     {
-        TransitionScene(true);
+        TransitionScene("play");
     }
 }

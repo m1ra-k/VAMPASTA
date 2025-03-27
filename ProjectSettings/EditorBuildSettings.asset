@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CookingGame.unity
     guid: cb8d08b84e137e4449fd39716932a56d
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 53183b1346e40234193723203b281517
+  - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: b32278b12c9988647bac39ed7213befd
   m_configObjects: {}

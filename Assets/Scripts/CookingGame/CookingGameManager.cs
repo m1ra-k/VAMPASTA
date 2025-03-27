@@ -20,7 +20,7 @@ public class CookingGameManager : MonoBehaviour
     [SerializeField]
     private bool playingCookingGame;
     [SerializeField]
-    private bool finishedCooking;
+    public bool finishedCooking;
 
     [Header("Beatmap")]
     [SerializeField]
@@ -41,7 +41,10 @@ public class CookingGameManager : MonoBehaviour
     private int framesToWait = 52;
     [SerializeField]
     private int beatmapListIndex;
-    
+
+    public Queue<GameObject> approachCircleFoodQueue = new Queue<GameObject>();
+    public Queue<GameObject> approachCircleGarlicQueue = new Queue<GameObject>();
+    public List<GameObject> hearts;
 
     void Awake()
     {
@@ -134,6 +137,19 @@ public class CookingGameManager : MonoBehaviour
             Transform parentTransform = approachCircleTypeEnum == ApproachCircleTypeEnum.Food ? hitCircles[0].transform : hitCircles[1].transform;
             GameObject approachCircle = Instantiate(prefab, parentTransform);
             approachCircle.transform.localPosition = new Vector2(0f, 700f);
+            approachCircle.name += Random.Range(0, 1000).ToString("D3");
+            // need to add it to the corresponding q
+            switch (approachCircleTypeEnum)
+            {
+                case ApproachCircleTypeEnum.Food:
+                    approachCircleFoodQueue.Enqueue(approachCircle);
+                    break;
+
+                case ApproachCircleTypeEnum.Garlic:
+                    approachCircleGarlicQueue.Enqueue(approachCircle);
+                    break;
+            }
+            // print($"added {approachCircle.name}");
         }
     }
     
@@ -142,5 +158,9 @@ public class CookingGameManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         done.SetActive(true);
+
+        yield return new WaitForSeconds(3f);
+
+        finishedCooking = true;
     }
 }
