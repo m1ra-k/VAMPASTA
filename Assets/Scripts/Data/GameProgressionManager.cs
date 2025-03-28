@@ -184,10 +184,12 @@ public class GameProgressionManager : MonoBehaviour
             sceneType = currentScene.Equals("RestaurantOverworld") ? "CookingGame" : "RestaurantOverworld";
         }
         
+        string nextSceneVisualNovelJSONFileName = "";
+
         switch (sceneType)
         {
             case "VisualNovel":
-                string nextSceneVisualNovelJSONFileName = sceneProgressionLookup[sceneNumber][1];
+                nextSceneVisualNovelJSONFileName = sceneProgressionLookup[sceneNumber][1];
                 nextSceneVisualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{nextSceneVisualNovelJSONFileName}");
 
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "VisualNovel");
@@ -199,6 +201,10 @@ public class GameProgressionManager : MonoBehaviour
                 
             // TODO? focus on VisualNovel for now
             case "RestaurantOverworld":
+                // TODO
+                // nextSceneVisualNovelJSONFileName = sceneProgressionLookup[sceneNumber][1];
+                nextSceneVisualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/vampasta_3_before_third_round");
+
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "RestaurantOverworld");
                 transitioning = true;
                 audioSourceBGM.loop = true;

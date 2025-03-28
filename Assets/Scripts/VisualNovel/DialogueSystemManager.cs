@@ -45,7 +45,7 @@ public class DialogueSystemManager : MonoBehaviour
     private DialogueStruct currentDialogue;
     private BaseDialogueStruct currentBaseDialogue;
     private Coroutine typeWriterCoroutine;
-    private int dialogueIndex = -1;
+    public int dialogueIndex = -1;
     private int skippedFromIndex = -1;
     private int jumpToIndex = -1;
     private string dialogueOnDisplay;
@@ -61,25 +61,27 @@ public class DialogueSystemManager : MonoBehaviour
 
     void Awake()
     {
-        LoadVNDialogueFromJSON();
-        
         audioSource = GetComponent<AudioSource>();
 
         GameProgressionManager = GameObject.Find("GameProgressionManager").GetComponent<GameProgressionManager>();
         if (GameProgressionManager.nextSceneVisualNovelJSONFile != null)
         {
+            print($"not null {GameProgressionManager.nextSceneVisualNovelJSONFile.name}");
             visualNovelJSONFile = GameProgressionManager.nextSceneVisualNovelJSONFile;            
         }
         else
         {
+            print("it was null");
             // allows for skipping when need to debug        
-            if (GameProgressionManager.sceneNumber != -1 && debug)
+            if (GameProgressionManager.sceneNumber != -1)
             {
                 Debug.Log($"Debug ON. Skipping to scene {GameProgressionManager.sceneNumber}.");
                 string visualNovelJSONFileName = GameProgressionManager.sceneProgressionLookup[GameProgressionManager.sceneNumber][1];
                 visualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{visualNovelJSONFileName}");
             }
         }  
+
+        LoadVNDialogueFromJSON();
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -115,9 +117,8 @@ public class DialogueSystemManager : MonoBehaviour
         {
             if (currentDialogue.endOfScene)
             {
-                if (GameProgressionManager.sceneNumber == 1 || 
-                    GameProgressionManager.sceneNumber == 3 || 
-                    GameProgressionManager.sceneNumber == 5)
+                if (GameProgressionManager.currentScene.Equals("RestaurantOverworld") && 
+                    (GameProgressionManager.sceneNumber == 1 || GameProgressionManager.sceneNumber == 3 || GameProgressionManager.sceneNumber == 5))
                 {
                     GameProgressionManager.dialogueCanvas.SetActive(false);
                     GameProgressionManager.currentlyTalking = false;
@@ -146,7 +147,6 @@ public class DialogueSystemManager : MonoBehaviour
                 }
                 else
                 {
-                    print("expected");
                     ProgressMainVNSequence();
                 }
             }
