@@ -27,12 +27,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Move();
-
-        if (movementVector != prevMovementVector)
+        if (!GameProgressionManager.currentlyTalking)
         {
-            DetermineAnimation();
+            Move();
+
+            if (movementVector != prevMovementVector)
+            {
+                DetermineAnimation();
+            }  
         }
+
+        if (GameProgressionManager.currentlyTalking)
+        {
+            movementVector = Vector2.zero;
+        }
+            
 
         if (movementVector == Vector2.zero)
         {

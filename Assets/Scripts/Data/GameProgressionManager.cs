@@ -21,6 +21,7 @@ public class GameProgressionManager : MonoBehaviour
     [Header("[Restaurant Overworld]")]
     public GameObject ravi;
     public GameObject dialogueCanvas;
+    private DialogueSystemManager dialogueCanvasDialogueSystemManager;
     public bool currentlyTalking;
     public bool facingUp;
     public bool finishedCurrentRound;
@@ -86,6 +87,7 @@ public class GameProgressionManager : MonoBehaviour
                 transitioning = false;
                 ravi = GameObject.FindWithTag("Player");
                 dialogueCanvas = GameObject.FindWithTag("Dialogue");
+                dialogueCanvasDialogueSystemManager = dialogueCanvas.GetComponentInChildren<DialogueSystemManager>();
                 dialogueCanvas.SetActive(false);
                 if (previousScene.Equals("CookingGame")) 
                 {
@@ -124,6 +126,7 @@ public class GameProgressionManager : MonoBehaviour
                     if (ravi.transform.position == new Vector3(365, 395, 0) && !currentlyTalking)
                     {
                         currentlyTalking = true;
+                        dialogueCanvasDialogueSystemManager.enabled = true;
                         dialogueCanvas.SetActive(true);
                     }
                     // plate is settable

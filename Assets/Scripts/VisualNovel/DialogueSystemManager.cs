@@ -61,6 +61,8 @@ public class DialogueSystemManager : MonoBehaviour
 
     void Awake()
     {
+        LoadVNDialogueFromJSON();
+        
         audioSource = GetComponent<AudioSource>();
 
         GameProgressionManager = GameObject.Find("GameProgressionManager").GetComponent<GameProgressionManager>();
@@ -95,8 +97,12 @@ public class DialogueSystemManager : MonoBehaviour
 
     void Start() 
     {
-        LoadVNDialogueFromJSON();
+        
+    }
 
+    void OnEnable()
+    {
+        print("enabled");
         ProgressMainVNSequence(isStartDialogue: true);
     }
 
@@ -115,8 +121,9 @@ public class DialogueSystemManager : MonoBehaviour
                 {
                     GameProgressionManager.dialogueCanvas.SetActive(false);
                     GameProgressionManager.currentlyTalking = false;
-                    currentDialogue = dialogueList[0];
+                    finishedDialogue = false;
                     dialogueIndex = -1;
+                    enabled = false;
                 }
                 else if (!transitioningScene)
                 {
@@ -139,6 +146,7 @@ public class DialogueSystemManager : MonoBehaviour
                 }
                 else
                 {
+                    print("expected");
                     ProgressMainVNSequence();
                 }
             }
