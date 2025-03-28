@@ -11,21 +11,24 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 prevMovementVector;
     private Animator animator;
 
+    private Vector2 targetPosition;
+    private float stepSize = 100f;
+    private float moveSpeed = 150f;
+    private bool isMoving = false;
+    public LayerMask obstacleLayer;
+
     void Start()
     {
         GameProgressionManager = FindObjectOfType<GameProgressionManager>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        targetPosition = transform.position;
     }
 
     void Update()
     {
-        if (!GameProgressionManager.transitioning) {
-            movementVector.x = Input.GetAxisRaw("Horizontal");
-            movementVector.y = Input.GetAxisRaw("Vertical");
-
-            rb.velocity = movementVector.normalized * speed;
-        }
+        Move();
 
         if (movementVector != prevMovementVector)
         {
@@ -38,6 +41,38 @@ public class PlayerMovement : MonoBehaviour
         }
 
         prevMovementVector = movementVector;
+    }
+
+    void Move()
+    {
+        if (!isMoving)
+        {
+            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+            if (input != Vector2.zero)
+            {
+                if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+                    input.y = 0;
+                else
+                    input.x = 0;
+
+                Vector2 nextPosition = (Vector2)transform.position + input * stepSize;
+
+                // Raycast to check if a wall is within 5 units in this direction
+                if (!Physics2D.Raycast(transform.position, input, 160f, obstacleLayer))
+                {
+                    targetPosition = nextPosition;
+                    isMoving = true;
+                }
+            }
+        }
+
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+        if ((Vector2)transform.position == targetPosition)
+        {
+            isMoving = false;
+        }
     }
 
     void DetermineAnimation()
