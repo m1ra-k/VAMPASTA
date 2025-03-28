@@ -52,7 +52,9 @@ public class PlayerMovement : MonoBehaviour
 
             if (movementVector != Vector2.zero)
             {
-                GameProgressionManager.facingUp = movementVector.x == 0 && movementVector.y == 1;            
+                GameProgressionManager.facingUp = movementVector.x == 0 && movementVector.y == 1;
+                // print($"vector is {movementVector.x == 0 && movementVector.y == 1}");
+                // print($"gpm is {GameProgressionManager.facingUp}");
 
                 if (Mathf.Abs(movementVector.x) > Mathf.Abs(movementVector.y))
                 {

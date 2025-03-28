@@ -48,7 +48,7 @@ public class CookingGameManager : MonoBehaviour
 
     void Awake()
     {
-        string[] lines = beatmapFiles[roundNumber].text.Split('\n');
+        string[] lines = beatmapFiles[roundNumber - 1].text.Split('\n');
 
         ApproachCircleTypeEnum? approachCircleTypeEnum;
 

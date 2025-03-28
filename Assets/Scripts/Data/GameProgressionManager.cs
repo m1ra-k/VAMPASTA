@@ -13,9 +13,10 @@ public class GameProgressionManager : MonoBehaviour
     private FadeEffect fadeEffect;
     private GameObject blackTransition;
 
-    [Header("[Moment]")]
+    [Header("[State]")]
     public int sceneNumber;
     public string previousScene;
+    public bool finishedCurrentRound;
 
     [Header("[Player]")]
     public GameObject ravi;
@@ -36,11 +37,11 @@ public class GameProgressionManager : MonoBehaviour
     {    
         { 0, new List<string> { "VisualNovel", "vampasta_0_prologue" } },
         { 1, new List<string> { "RestaurantOverworld" } },
-        { 2, new List<string> { "VisualNovel", "vampasta_1_post_round" } },
+        { 2, new List<string> { "VisualNovel", "vampasta_1_post_first_round" } },
         { 3, new List<string> { "RestaurantOverworld" } },
-        { 4, new List<string> { "VisualNovel", "vampasta_2_post_round" } },
+        { 4, new List<string> { "VisualNovel", "vampasta_2_post_second_round" } },
         { 5, new List<string> { "RestaurantOverworld" } },
-        { 6, new List<string> { "VisualNovel", "vampasta_3_post_round" } }
+        { 6, new List<string> { "VisualNovel", "vampasta_3_post_third_round" } }
     };
 
     void Awake()
@@ -80,7 +81,7 @@ public class GameProgressionManager : MonoBehaviour
                 ravi = GameObject.FindWithTag("Player");
                 if (previousScene.Equals("CookingGame"))
                 {
-                    ravi.transform.localPosition = new Vector2(-300, -65);
+                    ravi.transform.localPosition = new Vector2(-335, -65);
                 }
                 break;
 
@@ -108,18 +109,20 @@ public class GameProgressionManager : MonoBehaviour
                     previousScene = "RestaurantOverworld";
                 }
                 // facing correct direction (up)
-                else if (facingUp)
+                else if (facingUp && Input.GetKeyDown(KeyCode.Space))
                 {
                     // TODO ... MAKE PROMPTS FOR THESE PARTS NEXT !!!
                     // mateo is talkable
                     if (ravi.transform.position == new Vector3(365, 395, 0))
                     {
-                        Debug.Log("can talk to mateo");
+                        Debug.Log("talking to mateo!");
                     }
                     // plate is settable
-                    else if (ravi.transform.position == new Vector3(465, 395, 0))
+                    else if (ravi.transform.position == new Vector3(465, 395, 0) && finishedCurrentRound)
                     {
-                        Debug.Log("can set down plate");
+                        finishedCurrentRound = false;
+                        TransitionScene("play");
+                        Debug.Log("set down plate!");
                     }
                 }
                 
@@ -133,6 +136,7 @@ public class GameProgressionManager : MonoBehaviour
                 }
                 else if (cookingGameManager.finishedCooking)
                 {
+                    finishedCurrentRound = true;
                     TransitionScene();
                     previousScene = "CookingGame";
                 }
@@ -164,7 +168,9 @@ public class GameProgressionManager : MonoBehaviour
         {
             case "VisualNovel":
                 string nextSceneVisualNovelJSONFileName = sceneProgressionLookup[sceneNumber][1];
+                print("name" + nextSceneVisualNovelJSONFileName);
                 nextSceneVisualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{nextSceneVisualNovelJSONFileName}");
+                print("file?" + nextSceneVisualNovelJSONFile);
 
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "VisualNovel");
                 StartCoroutine(PlayMusic(1));

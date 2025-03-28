@@ -78,7 +78,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG21",                
-                "dialogue": "I see..",
+                "dialogue": "I see...",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -232,10 +232,10 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG21",                
-                "dialogue": "",
+                "dialogue": "If you say so.",
                 "textSpeed": 0
             },
-            "conditionalChoices": "If you say so.",
+            "conditionalChoices": "",
             "jumpToIndex": -1
         },
         {
@@ -577,7 +577,7 @@
         {
             "baseDialogue": {
                 "vnType": "Normal",
-                "character": "Ravi",
+                "character": "Mateo",
                 "npcSprite": [
                     "Transparent"
                 ],

@@ -234,7 +234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1511715411906664142, guid: 0bc529b942a79c34595e64928b4717e0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2190693963473393147, guid: 0bc529b942a79c34595e64928b4717e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -406,7 +406,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 2354351c226caca48968c30bc8661d82, type: 3}
   - {fileID: 4900000, guid: e357c90bb4496c84f8032f9aec7f92c0, type: 3}
   - {fileID: 4900000, guid: e6a3ae262b134df45bbd6ca67a8af2ad, type: 3}
-  roundNumber: 0
+  roundNumber: 1
   frameCount: 51
   framesToWait: 52
   beatmapListIndex: 0
@@ -1028,7 +1028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
+  m_AnchoredPosition: {x: 250, y: 0}
   m_SizeDelta: {x: 299.6482, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &789516791
