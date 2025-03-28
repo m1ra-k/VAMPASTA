@@ -37,7 +37,7 @@ public class HitCircleBehavior : MonoBehaviour
     {
         if (closestChildTransform != null)
         {
-            print("tried to destroy the closest child");
+            // print("tried to destroy the closest child");
             DestroyLargestApproachCircleChild();
         }
     }
@@ -55,7 +55,7 @@ public class HitCircleBehavior : MonoBehaviour
         if (approachCirclesQueue.Peek().transform.position.y < 120f)
         {
             GameObject missed = approachCirclesQueue.Dequeue();
-            print($"due to too low: missed {missed.name}");
+            // print($"due to too low: missed {missed.name}");
             updateHitJudgementCoroutine = StartCoroutine(UpdateHitJudgement("miss"));
             RemoveHeart();
             closestChildTransform = null;
@@ -72,12 +72,12 @@ public class HitCircleBehavior : MonoBehaviour
         GameObject got = approachCirclesQueue.Dequeue();
         if (got.transform.position.y < 190f) // y is
         {
-            print($"got {got.name}");
+            // print($"got {got.name}");
             updateHitJudgementCoroutine = StartCoroutine(UpdateHitJudgement("hit"));
         }
         else
         {
-            print($"due to early press: missed {got.name} at {got.transform.position.y}");
+            // print($"due to early press: missed {got.name} at {got.transform.position.y}");
             updateHitJudgementCoroutine = StartCoroutine(UpdateHitJudgement("miss"));
             RemoveHeart();
         }

@@ -15,13 +15,13 @@ public class GameProgressionManager : MonoBehaviour
 
     [Header("[State]")]
     public int sceneNumber;
+    public bool transitioning;
     public string previousScene;
-    public bool finishedCurrentRound;
-
-    [Header("[Player]")]
+    
+    [Header("[Restaurant Overworld]")]
     public GameObject ravi;
     public bool facingUp;
-    public bool transitioning;
+    public bool finishedCurrentRound;
 
     [Header("[Cooking Game]")]
     private CookingGameManager cookingGameManager;
@@ -83,7 +83,7 @@ public class GameProgressionManager : MonoBehaviour
             case "RestaurantOverworld":
                 transitioning = false;
                 ravi = GameObject.FindWithTag("Player");
-                if (previousScene.Equals("CookingGame"))
+                if (previousScene.Equals("CookingGame")) 
                 {
                     ravi.transform.localPosition = new Vector2(-335, -65);
                 }
@@ -126,7 +126,7 @@ public class GameProgressionManager : MonoBehaviour
                     {
                         finishedCurrentRound = false;
                         TransitionScene("play");
-                        // Debug.Log("set down plate!");
+                        previousScene = "VisualNovel";
                     }
                 }
                 
@@ -195,7 +195,10 @@ public class GameProgressionManager : MonoBehaviour
                 transitioning = true;
                 audioSourceBGM.loop = true;
                 // TODO if music 0 isnt already play it, then play it (vn to ro)
-                StartCoroutine(PlayMusic(0));
+                if (currentTrack != 0)
+                {
+                    StartCoroutine(PlayMusic(0));
+                }
                 break;
 
             case "CookingGame":

@@ -34,8 +34,6 @@ public class CookingGameManager : MonoBehaviour
     [SerializeField]
     private List<List<ApproachCircleTypeEnum?>> beatmapList = new List<List<ApproachCircleTypeEnum?>>();
     [SerializeField]
-    private int roundNumber;
-    [SerializeField]
     private int frameCount = 51;
     [SerializeField]
     private int framesToWait = 52;
@@ -48,7 +46,9 @@ public class CookingGameManager : MonoBehaviour
 
     void Awake()
     {
-        string[] lines = beatmapFiles[roundNumber - 1].text.Split('\n');
+        GameProgressionManager = FindObjectOfType<GameProgressionManager>();
+
+        string[] lines = beatmapFiles[(GameProgressionManager.sceneNumber + 1 )/ 2 - 1].text.Split('\n');
 
         ApproachCircleTypeEnum? approachCircleTypeEnum;
 
@@ -78,8 +78,6 @@ public class CookingGameManager : MonoBehaviour
 
     void Start()
     {
-        GameProgressionManager = FindObjectOfType<GameProgressionManager>();
-
         // scene number is 1 , 3 , 5
         // if scene number is 1
         if (GameProgressionManager.sceneNumber == 1)
