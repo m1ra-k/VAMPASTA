@@ -20,6 +20,8 @@ public class GameProgressionManager : MonoBehaviour
     
     [Header("[Restaurant Overworld]")]
     public GameObject ravi;
+    public GameObject dialogueCanvas;
+    public bool currentlyTalking;
     public bool facingUp;
     public bool finishedCurrentRound;
 
@@ -83,6 +85,8 @@ public class GameProgressionManager : MonoBehaviour
             case "RestaurantOverworld":
                 transitioning = false;
                 ravi = GameObject.FindWithTag("Player");
+                dialogueCanvas = GameObject.FindWithTag("Dialogue");
+                dialogueCanvas.SetActive(false);
                 if (previousScene.Equals("CookingGame")) 
                 {
                     ravi.transform.localPosition = new Vector2(-335, -65);
@@ -115,11 +119,12 @@ public class GameProgressionManager : MonoBehaviour
                 // facing correct direction (up)
                 else if (facingUp && Input.GetKeyDown(KeyCode.Space))
                 {
-                    // TODO ... MAKE PROMPTS FOR THESE PARTS NEXT !!!
                     // mateo is talkable
-                    if (ravi.transform.position == new Vector3(365, 395, 0))
+                    // TODO ... PREVENTING MOVEMENT
+                    if (ravi.transform.position == new Vector3(365, 395, 0) && !currentlyTalking)
                     {
-                        Debug.Log("talking to mateo!");
+                        currentlyTalking = true;
+                        dialogueCanvas.SetActive(true);
                     }
                     // plate is settable
                     else if (ravi.transform.position == new Vector3(465, 395, 0) && finishedCurrentRound)

@@ -559,12 +559,12 @@ GameObject:
   - component: {fileID: 459979323}
   - component: {fileID: 459979322}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &459979321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -787,7 +787,7 @@ Transform:
   m_GameObject: {fileID: 515100374}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 299, y: 69, z: 0}
+  m_LocalPosition: {x: 299, y: -35.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1714,7 +1714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -635, y: -260}
+  m_AnchoredPosition: {x: -635, y: -235}
   m_SizeDelta: {x: 50, y: 286.7918}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1625262122
@@ -1737,7 +1737,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: blank
+  m_text: "It\u2019s a big portion of my grade\u2026 and my group members haven\u2019t
+    been that responsive lately, either."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e37ae4858b2a08f47b1b17426b96140f, type: 2}
   m_sharedMaterial: {fileID: 8841187753577272907, guid: e37ae4858b2a08f47b1b17426b96140f, type: 2}
@@ -1764,8 +1765,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1852,7 +1853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: blank
+  m_text: Mateo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e37ae4858b2a08f47b1b17426b96140f, type: 2}
   m_sharedMaterial: {fileID: 8841187753577272907, guid: e37ae4858b2a08f47b1b17426b96140f, type: 2}
@@ -1879,8 +1880,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1945,7 +1946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75, y: -225}
+  m_AnchoredPosition: {x: -75, y: -230}
   m_SizeDelta: {x: 980, y: 132.8926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1820214888
@@ -2068,7 +2069,7 @@ MonoBehaviour:
   buttonClicked: 0
   choiceClicked: 0
   choiceMapping: -1
-  visualNovelJSONFile: {fileID: 4900000, guid: 849204b296a93f64796cf65dc57005fd, type: 3}
+  visualNovelJSONFile: {fileID: 4900000, guid: 78c941f44c2c37b4b840fb7a3b624301, type: 3}
   voices:
   - {fileID: 8300000, guid: 94b999ec7cbdc0b49892f70a52c62728, type: 3}
   - {fileID: 8300000, guid: a1c5051f09dacff4ea0902faad5d2e31, type: 3}
@@ -2243,7 +2244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1511715411906664142, guid: 0bc529b942a79c34595e64928b4717e0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2190693963473393147, guid: 0bc529b942a79c34595e64928b4717e0, type: 3}
       propertyPath: m_LocalPosition.x

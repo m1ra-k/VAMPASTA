@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour
     public AnimationClip[] raviAnimations;
 
     private GameProgressionManager GameProgressionManager;
-    private float speed = 350f;
     private Rigidbody2D rb;
     private Vector2 movementVector;
     private Vector2 prevMovementVector;

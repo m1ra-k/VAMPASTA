@@ -106,7 +106,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "Transparent",                
-                "dialogue": "You know <color=green>Mateo</color>, you say really embarrassing things sometimes.",
+                "dialogue": "You know, <color=green>Mateo</color>, you say really embarrassing things sometimes.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -166,7 +166,8 @@
                 "textSpeed": 0
             },
             "conditionalChoices": "",
-            "jumpToIndex": -1
+            "jumpToIndex": -1,
+            "endOfScene": true
         }
     ]
 }

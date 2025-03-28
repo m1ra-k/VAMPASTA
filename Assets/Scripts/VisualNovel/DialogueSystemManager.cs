@@ -53,6 +53,8 @@ public class DialogueSystemManager : MonoBehaviour
     public bool finishedDialogue = false;
 
     public bool spaceDisabled;
+
+    public bool debug;
     
     // data
     public GameProgressionManager GameProgressionManager;
@@ -69,7 +71,7 @@ public class DialogueSystemManager : MonoBehaviour
         else
         {
             // allows for skipping when need to debug        
-            if (GameProgressionManager.sceneNumber != -1)
+            if (GameProgressionManager.sceneNumber != -1 && debug)
             {
                 Debug.Log($"Debug ON. Skipping to scene {GameProgressionManager.sceneNumber}.");
                 string visualNovelJSONFileName = GameProgressionManager.sceneProgressionLookup[GameProgressionManager.sceneNumber][1];
@@ -104,11 +106,24 @@ public class DialogueSystemManager : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) || buttonClicked || choiceClicked) && !spaceDisabled
             && 
             (currentBaseDialogue.vnType == VNTypeEnum.Choice || currentBaseDialogue.vnType == VNTypeEnum.Normal) && normalBackground.GetComponent<Image>().color.a == 1)
-        { 
-            if (currentDialogue.endOfScene && !transitioningScene)
+        {
+            if (currentDialogue.endOfScene)
             {
-                transitioningScene = true;
-                GameProgressionManager.TransitionScene("play");
+                if (GameProgressionManager.sceneNumber == 1 || 
+                    GameProgressionManager.sceneNumber == 3 || 
+                    GameProgressionManager.sceneNumber == 5)
+                {
+                    GameProgressionManager.dialogueCanvas.SetActive(false);
+                    GameProgressionManager.currentlyTalking = false;
+                    currentDialogue = dialogueList[0];
+                    dialogueIndex = -1;
+                }
+                else if (!transitioningScene)
+                {
+                    transitioningScene = true;
+                    GameProgressionManager.TransitionScene("play");
+                }
+                
             }
             else if (!currentDialogue.endOfScene && !typeWriterInEffect && !finishedDialogue && choiceBoxes.transform.childCount == 0) 
             {

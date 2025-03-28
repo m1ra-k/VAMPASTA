@@ -166,7 +166,8 @@
                 "textSpeed": 0
             },
             "conditionalChoices": "",
-            "jumpToIndex": -1
+            "jumpToIndex": -1,
+            "endOfScene": true
         }
     ]
 }
