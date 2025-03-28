@@ -101,7 +101,6 @@ public class GameProgressionManager : MonoBehaviour
         {
             if (currentScene.Equals("RestaurantOverworld") )
             {
-                print($"ravi position is {ravi.transform.position}");
                 // go to cooking game if ravi goes through door
                 if (ravi.transform.position.x < 15)
                 {

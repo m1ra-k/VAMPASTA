@@ -41,7 +41,6 @@ public class FadeEffect : MonoBehaviour
 
     private IEnumerator Fade(GameObject gameObjectToFade, float startA, float endA, float fadeTime = 0.1f, string scene="")
     {
-        print(gameObjectToFade.name + scene);
         if (startA == 0)
         {
             gameObjectToFade.SetActive(true);
