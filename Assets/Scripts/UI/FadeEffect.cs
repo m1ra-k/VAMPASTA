@@ -25,11 +25,11 @@ public class FadeEffect : MonoBehaviour
     }
 
 
-    public void FadeIn(GameObject gameObjectToFadeIn, float fadeTime = 0.1f, string scene="")
+    public void FadeIn(GameObject gameObjectToFadeIn, float fadeTime = 0.1f, string scene="", float fadeDelay = 0f)
     {
         this.gameObjectToFadeIn = gameObjectToFadeIn;
 
-        StartCoroutine(Fade(gameObjectToFadeIn, 0, 1, fadeTime, scene));
+        StartCoroutine(Fade(gameObjectToFadeIn, 0, 1, fadeTime, scene, fadeDelay));
     }
 
     public void FadeOut(GameObject gameObjectToFadeOut, float fadeTime = 0.1f)
@@ -39,8 +39,13 @@ public class FadeEffect : MonoBehaviour
         StartCoroutine(Fade(gameObjectToFadeOut, 1, 0, fadeTime));
     }
 
-    private IEnumerator Fade(GameObject gameObjectToFade, float startA, float endA, float fadeTime = 0.1f, string scene="")
+    private IEnumerator Fade(GameObject gameObjectToFade, float startA, float endA, float fadeTime = 0.1f, string scene="", float fadeDelay = 0f)
     {
+        if (fadeDelay != 0)
+        {
+            yield return new WaitForSeconds(fadeDelay);
+        }
+
         if (startA == 0)
         {
             gameObjectToFade.SetActive(true);

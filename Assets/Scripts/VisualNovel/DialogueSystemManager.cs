@@ -107,6 +107,7 @@ public class DialogueSystemManager : MonoBehaviour
         { 
             if (currentDialogue.endOfScene && !transitioningScene)
             {
+                print("okay end of scene now");
                 transitioningScene = true;
                 GameProgressionManager.TransitionScene("play");
             }

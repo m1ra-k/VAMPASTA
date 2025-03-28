@@ -20,8 +20,12 @@ public class ApproachCircleBehavior : MonoBehaviour
                 speed = 3f;
                 break;
 
-            case 2:
+            case 3:
                 speed = 4f;
+                break;
+
+            case 5:
+                speed = 5f;
                 break;
         }
     }

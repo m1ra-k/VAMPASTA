@@ -26,6 +26,9 @@ public class GameProgressionManager : MonoBehaviour
     [Header("[Cooking Game]")]
     private CookingGameManager cookingGameManager;
 
+    [Header("[End Screen]")]
+    private bool fadedInTheEnd;
+
     [Header("[Music]")]
     public List<AudioClip> audioClips = new List<AudioClip>();
     public AudioSource audioSourceBGM;
@@ -41,7 +44,8 @@ public class GameProgressionManager : MonoBehaviour
         { 3, new List<string> { "RestaurantOverworld" } },
         { 4, new List<string> { "VisualNovel", "vampasta_2_post_second_round" } },
         { 5, new List<string> { "RestaurantOverworld" } },
-        { 6, new List<string> { "VisualNovel", "vampasta_3_post_third_round" } }
+        { 6, new List<string> { "VisualNovel", "vampasta_3_post_third_round" } },
+        { 7, new List<string> { "EndScreen" } },
     };
 
     void Awake()
@@ -141,6 +145,14 @@ public class GameProgressionManager : MonoBehaviour
                     previousScene = "CookingGame";
                 }
             }
+            else if (currentScene.Equals("EndScreen"))
+            {
+                if (!fadedInTheEnd)
+                {
+                    fadedInTheEnd = true;
+                    fadeEffect.FadeIn(GameObject.FindWithTag("Fade"), fadeTime: 1f, fadeDelay: 1);
+                }
+            }
         }
     }
 
@@ -173,13 +185,18 @@ public class GameProgressionManager : MonoBehaviour
                 print("file?" + nextSceneVisualNovelJSONFile);
 
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "VisualNovel");
-                StartCoroutine(PlayMusic(1));
+                if (sceneNumber == 0)
+                {
+                    StartCoroutine(PlayMusic(1)); 
+                }
                 break;
                 
             // TODO? focus on VisualNovel for now
             case "RestaurantOverworld":
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "RestaurantOverworld");
                 transitioning = true;
+                audioSourceBGM.loop = true;
+                // TODO if music 0 isnt already play it, then play it (vn to ro)
                 StartCoroutine(PlayMusic(0));
                 break;
 
@@ -193,6 +210,11 @@ public class GameProgressionManager : MonoBehaviour
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "GameOver");
                 transitioning = true;
                 StopMusic();
+                break;
+
+            case "EndScreen":
+                fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "EndScreen");
+                transitioning = true;
                 break;
         }
     }

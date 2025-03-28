@@ -162,7 +162,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG24",                
-                "dialogue": "Hell no, there's way too many things that could go wrong with that.)",
+                "dialogue": "(Hell no, there's way too many things that could go wrong with that.)",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -395,7 +395,7 @@
         {
             "baseDialogue": {
                 "vnType": "Normal",
-                "character": "",
+                "character": "Ravi",
                 "npcSprite": [
                     "Transparent"
                 ],
@@ -409,7 +409,7 @@
         {
             "baseDialogue": {
                 "vnType": "Normal",
-                "character": "",
+                "character": "Ravi",
                 "npcSprite": [
                     "Transparent"
                 ],
@@ -573,7 +573,7 @@
             },
             "conditionalChoices": "",
             "jumpToIndex": -1,
-            "endofScene": true
+            "endOfScene": true
         }
     ]
 }
