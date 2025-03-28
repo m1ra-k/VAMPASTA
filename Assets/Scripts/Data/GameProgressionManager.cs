@@ -48,7 +48,14 @@ public class GameProgressionManager : MonoBehaviour
         { 4, new List<string> { "VisualNovel", "vampasta_2_post_second_round" } },
         { 5, new List<string> { "RestaurantOverworld" } },
         { 6, new List<string> { "VisualNovel", "vampasta_3_post_third_round" } },
-        { 7, new List<string> { "EndScreen" } },
+        { 7, new List<string> { "EndScreen" } }
+    };
+
+    public Dictionary <int, List<string>> overworldDialogueLookup = new Dictionary<int, List<string>> 
+    {
+        { 1, new List<string> { "VisualNovel", "vampasta_1_before_first_round" } },
+        { 3, new List<string> { "VisualNovel", "vampasta_2_before_second_round" } },
+        { 5, new List<string> { "VisualNovel", "vampasta_3_before_third_round" } },
     };
 
     void Awake()
@@ -199,16 +206,13 @@ public class GameProgressionManager : MonoBehaviour
                 }
                 break;
                 
-            // TODO? focus on VisualNovel for now
             case "RestaurantOverworld":
-                // TODO
-                // nextSceneVisualNovelJSONFileName = sceneProgressionLookup[sceneNumber][1];
-                nextSceneVisualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/vampasta_3_before_third_round");
+                nextSceneVisualNovelJSONFileName = overworldDialogueLookup[sceneNumber][1];
+                nextSceneVisualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{nextSceneVisualNovelJSONFileName}");
 
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "RestaurantOverworld");
                 transitioning = true;
                 audioSourceBGM.loop = true;
-                // TODO if music 0 isnt already play it, then play it (vn to ro)
                 if (currentTrack != 0)
                 {
                     StartCoroutine(PlayMusic(0));
