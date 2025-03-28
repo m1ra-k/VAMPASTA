@@ -456,7 +456,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG33",                
-                "dialogue":  "Mm, buon appetito, indeed.",
+                "dialogue":  "Mm, buon appetito indeed.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
