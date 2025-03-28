@@ -11,8 +11,6 @@ public class SpriteCache : ScriptableObject
 
     void OnEnable() 
     {
-        Debug.Log("Loading sprites for the first time...");
-
         LoadSprite("BG/", Enum.GetNames(typeof(BGSpriteEnum)));
     }
 
