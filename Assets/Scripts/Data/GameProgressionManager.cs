@@ -27,7 +27,7 @@ public class GameProgressionManager : MonoBehaviour
     private CookingGameManager cookingGameManager;
 
     [Header("[End Screen]")]
-    private bool fadedInTheEnd;
+    public bool fadedInTheEnd;
 
     [Header("[Music]")]
     public List<AudioClip> audioClips = new List<AudioClip>();
@@ -94,7 +94,7 @@ public class GameProgressionManager : MonoBehaviour
                 cookingGameManager = FindObjectOfType<CookingGameManager>();
                 break;
 
-            case "GameOver":
+            default:
                 transitioning = false;
                 break;
         }     
@@ -126,7 +126,7 @@ public class GameProgressionManager : MonoBehaviour
                     {
                         finishedCurrentRound = false;
                         TransitionScene("play");
-                        Debug.Log("set down plate!");
+                        // Debug.Log("set down plate!");
                     }
                 }
                 
@@ -150,7 +150,7 @@ public class GameProgressionManager : MonoBehaviour
                 if (!fadedInTheEnd)
                 {
                     fadedInTheEnd = true;
-                    fadeEffect.FadeIn(GameObject.FindWithTag("Fade"), fadeTime: 1f, fadeDelay: 1);
+                    fadeEffect.FadeIn(GameObject.FindWithTag("Fade"), fadeTime: 2f, fadeDelay: 2f);
                 }
             }
         }
@@ -180,9 +180,7 @@ public class GameProgressionManager : MonoBehaviour
         {
             case "VisualNovel":
                 string nextSceneVisualNovelJSONFileName = sceneProgressionLookup[sceneNumber][1];
-                print("name" + nextSceneVisualNovelJSONFileName);
                 nextSceneVisualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{nextSceneVisualNovelJSONFileName}");
-                print("file?" + nextSceneVisualNovelJSONFile);
 
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "VisualNovel");
                 if (sceneNumber == 0)
