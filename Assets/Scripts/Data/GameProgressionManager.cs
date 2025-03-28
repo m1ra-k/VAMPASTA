@@ -19,6 +19,7 @@ public class GameProgressionManager : MonoBehaviour
 
     [Header("[Player]")]
     public GameObject ravi;
+    public bool facingUp;
     public bool transitioning;
 
     [Header("[Cooking Game]")]
@@ -46,7 +47,6 @@ public class GameProgressionManager : MonoBehaviour
     {        
         if (GameProgressionManagerInstance == null)
         {
-            print("ayo");
             Application.targetFrameRate = 60;
             GameProgressionManagerInstance = this;
             DontDestroyOnLoad(gameObject);
@@ -107,7 +107,22 @@ public class GameProgressionManager : MonoBehaviour
                     TransitionScene();
                     previousScene = "RestaurantOverworld";
                 }
-                // TODO: go to visual novel if set down plate
+                // facing correct direction (up)
+                else if (facingUp)
+                {
+                    // TODO ... MAKE PROMPTS FOR THESE PARTS NEXT !!!
+                    // mateo is talkable
+                    if (ravi.transform.position == new Vector3(365, 395, 0))
+                    {
+                        Debug.Log("can talk to mateo");
+                    }
+                    // plate is settable
+                    else if (ravi.transform.position == new Vector3(465, 395, 0))
+                    {
+                        Debug.Log("can set down plate");
+                    }
+                }
+                
             }
             else if (currentScene.Equals("CookingGame"))
             {

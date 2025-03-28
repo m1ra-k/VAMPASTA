@@ -13,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 targetPosition;
     private float stepSize = 100f;
-    private float moveSpeed = 150f;
-    private bool isMoving = false;
+    private float moveSpeed = 300f;
+    private bool isMoving;
     public LayerMask obstacleLayer;
 
     void Start()
@@ -47,19 +47,25 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isMoving)
         {
-            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+    
 
-            if (input != Vector2.zero)
+            if (movementVector != Vector2.zero)
             {
-                if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
-                    input.y = 0;
+                GameProgressionManager.facingUp = movementVector.x == 0 && movementVector.y == 1;            
+
+                if (Mathf.Abs(movementVector.x) > Mathf.Abs(movementVector.y))
+                {
+                    movementVector.y = 0;
+                }
                 else
-                    input.x = 0;
+                {
+                    movementVector.x = 0;
+                }
 
-                Vector2 nextPosition = (Vector2)transform.position + input * stepSize;
+                Vector2 nextPosition = (Vector2)transform.position + movementVector * stepSize;
 
-                // Raycast to check if a wall is within 5 units in this direction
-                if (!Physics2D.Raycast(transform.position, input, 160f, obstacleLayer))
+                if (!Physics2D.Raycast(transform.position, movementVector, 160f, obstacleLayer))
                 {
                     targetPosition = nextPosition;
                     isMoving = true;
