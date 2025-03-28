@@ -91,6 +91,7 @@ public class GameProgressionManager : MonoBehaviour
         switch (currentScene)
         {
             case "RestaurantOverworld":
+                currentlyTalking = false;
                 transitioning = false;
                 ravi = GameObject.FindWithTag("Player");
                 dialogueCanvas = GameObject.FindWithTag("Dialogue");
@@ -126,7 +127,7 @@ public class GameProgressionManager : MonoBehaviour
                     previousScene = "RestaurantOverworld";
                 }
                 // facing correct direction (up)
-                else if (facingUp && Input.GetKeyDown(KeyCode.Space))
+                else if (facingUp && Input.GetKeyDown(KeyCode.Space) && !currentlyTalking)
                 {
                     // mateo is talkable
                     // TODO ... PREVENTING MOVEMENT
@@ -139,6 +140,7 @@ public class GameProgressionManager : MonoBehaviour
                     // plate is settable
                     else if (ravi.transform.position == new Vector3(465, 395, 0) && finishedCurrentRound)
                     {
+                        currentlyTalking = true;
                         finishedCurrentRound = false;
                         TransitionScene("play");
                         previousScene = "VisualNovel";

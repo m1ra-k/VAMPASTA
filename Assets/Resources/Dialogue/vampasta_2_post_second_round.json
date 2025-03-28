@@ -92,7 +92,21 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG23",                
-                "dialogue": "You pointed out my turtleneck earlier, but aren't you dressed pretty heavy today too?",
+                "dialogue": "You pointed out my turtleneck earlier...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG23",                
+                "dialogue": "but aren't you dressed pretty heavy today too?",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -106,7 +120,21 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG23",                
-                "dialogue": "I guess you're right. Now that I'm thinking about it, the turtleneck is making my neck feel pretty hot.",
+                "dialogue": "I guess you're right.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG23",                
+                "dialogue": "Now that I think about it, the turtleneck is making my neck feel pretty hot.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -190,7 +218,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG24",                
-                "dialogue": "Thanks... but you're not eating?",
+                "dialogue": "Thanks... but are you not eating?",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -414,7 +442,21 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG25",                
-                "dialogue": "I said this before, but you're crazy attentive. Are you like this because of your major? Or do you just really like me?",
+                "dialogue": "I said this before, but you're crazy attentive.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG25",                
+                "dialogue": "Are you like this because of your major? Or do you just really like me?",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -456,7 +498,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG25",                
-                "dialogue": "And this may be a bit bold of me to say, but you're acting quite different, Ravi.",
+                "dialogue": "And this may be a bit bold of me to say, but you're acting quite different, <color=#FFC0CB>Ravi</color>.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -484,7 +526,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG26",                
-                "dialogue": "(This again. I don't remember ever telling him my name. Should I call the cops or something?)",
+                "dialogue": "(This again.)",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -498,7 +540,35 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG26",                
-                "dialogue": "(No, this isn't even that bad... if anything, I'm more at risk with being found out if they question me too.)",
+                "dialogue": "(I don't remember ever telling him my name. Should I call the cops or something?)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG26",                
+                "dialogue": "(No, this isn't even that bad...)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG26",                
+                "dialogue": "(If anything, I'm more at risk with being found out if they question me too.)",
                 "textSpeed": 0
             },
             "conditionalChoices": "",

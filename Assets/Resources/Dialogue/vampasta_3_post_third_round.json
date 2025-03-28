@@ -330,7 +330,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG30",                
-                "dialogue": "Ehh...? Where is this coming from?",
+                "dialogue": "Ehh... ? Where is this coming from?",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -358,7 +358,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG31",                
-                "dialogue": "Chef, before I get on my way, may I request one more thing from you?",
+                "dialogue": "<color=#FFC0CB>Chef</color>, before I get on my way, may I request one more thing from you?",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -414,7 +414,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG31",                
-                "dialogue": "Mateo, you're cheesier than I thought! But sure, I guess.",
+                "dialogue": "<color=green>Mateo</color>, you're cheesier than I thought! But sure, I guess.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",

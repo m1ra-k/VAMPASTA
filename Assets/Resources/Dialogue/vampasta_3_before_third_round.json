@@ -50,7 +50,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "Transparent",                
-                "dialogue": "it's <color=#FFC0CB>warm</color>,",
+                "dialogue": "it's <color=#FFC0CB>comforting</color>,",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -64,7 +64,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "Transparent",                
-                "dialogue": "<color=#FFC0CB>comforting</color>,",
+                "dialogue": "<color=#FFC0CB>lovely</color>,",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -148,7 +148,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "Transparent",                
-                "dialogue": "How dense can you be?",
+                "dialogue": "How dense could you possibly be?",
                 "textSpeed": 0
             },
             "conditionalChoices": "",

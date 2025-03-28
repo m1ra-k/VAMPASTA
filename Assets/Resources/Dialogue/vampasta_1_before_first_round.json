@@ -8,7 +8,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "Transparent",                
-                "dialogue": "Mateo, what are you up doing so late anyway?",
+                "dialogue": "<color=green>Mateo</color>, what are you up doing so late anyway?",
                 "textSpeed": 0
             },
             "conditionalChoices": "",

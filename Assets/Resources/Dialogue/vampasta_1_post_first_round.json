@@ -190,7 +190,21 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG21",                
-                "dialogue": "I'm afraid you have that completely backward. I was just trying to start a conversation, that's all.",
+                "dialogue": "I'm afraid you have that completely backward.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG21",                
+                "dialogue": "I was just trying to start a conversation, that's all.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -288,7 +302,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG22",                
-                "dialogue": "Well then, I guess as a better conversation starter, why don't you tell me about yourself instead?",
+                "dialogue": "Well then, I guess as a better conversation starter,",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -302,7 +316,21 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG22",                
-                "dialogue": "It feels like you know a lot about me, but in comparison, I know relatively nothing about you.",
+                "dialogue": "why don't you tell me about yourself instead?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG22",                
+                "dialogue": "Feels like you know a lot about me, but I know relatively <i>niente</i> about you.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -358,7 +386,35 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG22",                
-                "dialogue": "I keep telling you, I'm not a kid. I'm in my last year of college, so I'm finishing up my degree right now. I'm not that much younger than you, you know.",
+                "dialogue": "I keep telling you, I'm not a kid.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG22",                
+                "dialogue": "I'm in my last year of college, so I'm finishing up my degree right now.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG22",                
+                "dialogue": "I'm not that much younger than you, you know.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -484,7 +540,21 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG22",                
-                "dialogue": "I enjoy looking into the so-called 'strange' or 'supernatural' phenomena. Things that can't be explained by science alone.",
+                "dialogue": "I enjoy looking into the so-called 'strange' or 'supernatural' phenomena.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG22",                
+                "dialogue": "Things that can't be explained by science alone.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
@@ -568,7 +638,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG22",                
-                "dialogue": "Right... what could I cook up for you next?",
+                "dialogue": "Right... whatever could I cook up for you next?",
                 "textSpeed": 0
             },
             "conditionalChoices": "",

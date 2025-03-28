@@ -66,16 +66,13 @@ public class DialogueSystemManager : MonoBehaviour
         GameProgressionManager = GameObject.Find("GameProgressionManager").GetComponent<GameProgressionManager>();
         if (GameProgressionManager.nextSceneVisualNovelJSONFile != null)
         {
-            print($"not null {GameProgressionManager.nextSceneVisualNovelJSONFile.name}");
             visualNovelJSONFile = GameProgressionManager.nextSceneVisualNovelJSONFile;            
         }
         else
         {
-            print("it was null");
             // allows for skipping when need to debug        
             if (GameProgressionManager.sceneNumber != -1)
             {
-                Debug.Log($"Debug ON. Skipping to scene {GameProgressionManager.sceneNumber}.");
                 string visualNovelJSONFileName = GameProgressionManager.sceneProgressionLookup[GameProgressionManager.sceneNumber][1];
                 visualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{visualNovelJSONFileName}");
             }
@@ -104,7 +101,6 @@ public class DialogueSystemManager : MonoBehaviour
 
     void OnEnable()
     {
-        print("enabled");
         ProgressMainVNSequence(isStartDialogue: true);
     }
 
