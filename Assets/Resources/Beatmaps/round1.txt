@@ -1,5 +1,5 @@
 Garlic,1
-Garlic,110|Food,110
+Garlic,110
 Food,110
 Garlic,117|Food,117
 Food,250

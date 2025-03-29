@@ -165,7 +165,7 @@ public class CookingGameManager : MonoBehaviour
 
         done.SetActive(true);
 
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(3f);
 
         finishedCooking = true;
     }
