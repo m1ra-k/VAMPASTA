@@ -703,7 +703,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2074,6 +2074,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 94b999ec7cbdc0b49892f70a52c62728, type: 3}
   - {fileID: 8300000, guid: a1c5051f09dacff4ea0902faad5d2e31, type: 3}
   transitioningScene: 0
+  dialogueIndex: -1
   finishedDialogue: 0
   spaceDisabled: 0
   debug: 0

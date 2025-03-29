@@ -94,11 +94,6 @@ public class DialogueSystemManager : MonoBehaviour
         // }
     }
 
-    void Start() 
-    {
-        
-    }
-
     void OnEnable()
     {
         ProgressMainVNSequence(isStartDialogue: true);

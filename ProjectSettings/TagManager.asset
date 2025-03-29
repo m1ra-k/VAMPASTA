@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fade
   - Dialogue
+  - Button
   layers:
   - Default
   - TransparentFX

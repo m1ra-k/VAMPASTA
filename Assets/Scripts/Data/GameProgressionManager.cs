@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameProgressionManager : MonoBehaviour
 {
@@ -10,13 +12,16 @@ public class GameProgressionManager : MonoBehaviour
     public string currentScene;
 
     // Transition    
-    private FadeEffect fadeEffect;
-    private GameObject blackTransition;
+    public FadeEffect fadeEffect;
+    public GameObject blackTransition;
 
     [Header("[State]")]
     public int sceneNumber;
     public bool transitioning;
     public string previousScene;
+
+    [Header("[Start Screen]")]
+    private Button playButton;
     
     [Header("[Restaurant Overworld]")]
     public GameObject ravi;
@@ -28,6 +33,9 @@ public class GameProgressionManager : MonoBehaviour
 
     [Header("[Cooking Game]")]
     private CookingGameManager cookingGameManager;
+
+    [Header("[Game Over]")]
+    public Button retryButton;
 
     [Header("[End Screen]")]
     public bool fadedInTheEnd;
@@ -88,11 +96,16 @@ public class GameProgressionManager : MonoBehaviour
 
         fadeEffect.FadeOut(blackTransition, 1f);
 
+        transitioning = false;
+
         switch (currentScene)
         {
+            case "StartScreen":
+                playButton = GameObject.FindWithTag("Button").GetComponent<Button>();
+                break;
+
             case "RestaurantOverworld":
                 currentlyTalking = false;
-                transitioning = false;
                 ravi = GameObject.FindWithTag("Player");
                 dialogueCanvas = GameObject.FindWithTag("Dialogue");
                 dialogueCanvasDialogueSystemManager = dialogueCanvas.GetComponentInChildren<DialogueSystemManager>();
@@ -104,12 +117,12 @@ public class GameProgressionManager : MonoBehaviour
                 break;
 
             case "CookingGame":
-                transitioning = false;
                 cookingGameManager = FindObjectOfType<CookingGameManager>();
                 break;
 
-            default:
-                transitioning = false;
+            case "GameOver":
+                StopMusic();
+                retryButton = GameObject.FindWithTag("Button").GetComponent<Button>();
                 break;
         }     
     }
@@ -117,8 +130,15 @@ public class GameProgressionManager : MonoBehaviour
     void Update()
     {
         if (!transitioning)
-        {
-            if (currentScene.Equals("RestaurantOverworld") )
+        {   
+            if (currentScene.Equals("StartScreen"))
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    playButton.onClick.Invoke();
+                }
+            }
+            if (currentScene.Equals("RestaurantOverworld"))
             {
                 // go to cooking game if ravi goes through door
                 if (ravi.transform.position.x < 15)
@@ -162,6 +182,13 @@ public class GameProgressionManager : MonoBehaviour
                     previousScene = "CookingGame";
                 }
             }
+            else if (currentScene.Equals("GameOver"))
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    retryButton.onClick.Invoke();
+                }
+            }
             else if (currentScene.Equals("EndScreen"))
             {
                 if (!fadedInTheEnd)
@@ -188,6 +215,12 @@ public class GameProgressionManager : MonoBehaviour
         {
             sceneType = "GameOver";
         }
+        else if (possibleFlag.Equals("retry"))
+        {
+            fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "CookingGame");
+            transitioning = true;
+            return;
+        }
         else
         {
             sceneType = currentScene.Equals("RestaurantOverworld") ? "CookingGame" : "RestaurantOverworld";
@@ -202,6 +235,7 @@ public class GameProgressionManager : MonoBehaviour
                 nextSceneVisualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{nextSceneVisualNovelJSONFileName}");
 
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "VisualNovel");
+                transitioning = true;
                 if (sceneNumber == 0)
                 {
                     StartCoroutine(PlayMusic(1)); 
@@ -242,7 +276,8 @@ public class GameProgressionManager : MonoBehaviour
 
     public void StopMusic()
     {
-        audioSourceBGM.Pause();
+        audioSourceBGM.Stop();
+        currentTrack = -1;
     }
 
     public IEnumerator PlayMusic(int index, float waitTime = 0.5f, GameObject gameObjectToDeactivate = null)
@@ -281,5 +316,5 @@ public class GameProgressionManager : MonoBehaviour
     public void PlayGame()
     {
         TransitionScene("play");
-    }
+    }   
 }
