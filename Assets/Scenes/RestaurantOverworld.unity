@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 124652072}
   - component: {fileID: 124652071}
   m_Layer: 5
-  m_Name: TutorialRestaurantOverworld
+  m_Name: Tutorial
   m_TagString: Tutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -64,7 +64,21 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG21",                
-                "dialogue": "You're awfully observant for noticing. No, she isn't. As you can see, it's just me and you right now.",
+                "dialogue": "You're awfully observant for noticing. No, she isn't.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG21",                
+                "dialogue": "As you can see, it's just me and you right now.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",
