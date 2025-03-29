@@ -175,6 +175,9 @@ public class CookingGameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.25f);
 
-        cookingRavi.sprite = cookingRaviReactions[0];
+        if (hearts.Count > 0)
+        {
+            cookingRavi.sprite = cookingRaviReactions[0];
+        }
     }
 }
