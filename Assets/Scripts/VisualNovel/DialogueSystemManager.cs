@@ -45,7 +45,7 @@ public class DialogueSystemManager : MonoBehaviour
     private DialogueStruct currentDialogue;
     private BaseDialogueStruct currentBaseDialogue;
     private Coroutine typeWriterCoroutine;
-    private int dialogueIndex = -1;
+    public int dialogueIndex = -1;
     private int skippedFromIndex = -1;
     private int jumpToIndex = -1;
     private string dialogueOnDisplay;
@@ -53,6 +53,8 @@ public class DialogueSystemManager : MonoBehaviour
     public bool finishedDialogue = false;
 
     public bool spaceDisabled;
+
+    public bool debug;
     
     // data
     public GameProgressionManager GameProgressionManager;
@@ -71,11 +73,12 @@ public class DialogueSystemManager : MonoBehaviour
             // allows for skipping when need to debug        
             if (GameProgressionManager.sceneNumber != -1)
             {
-                Debug.Log($"Debug ON. Skipping to scene {GameProgressionManager.sceneNumber}.");
                 string visualNovelJSONFileName = GameProgressionManager.sceneProgressionLookup[GameProgressionManager.sceneNumber][1];
                 visualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{visualNovelJSONFileName}");
             }
         }  
+
+        LoadVNDialogueFromJSON();
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -91,10 +94,8 @@ public class DialogueSystemManager : MonoBehaviour
         // }
     }
 
-    void Start() 
+    void OnEnable()
     {
-        LoadVNDialogueFromJSON();
-
         ProgressMainVNSequence(isStartDialogue: true);
     }
 
@@ -104,11 +105,24 @@ public class DialogueSystemManager : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) || buttonClicked || choiceClicked) && !spaceDisabled
             && 
             (currentBaseDialogue.vnType == VNTypeEnum.Choice || currentBaseDialogue.vnType == VNTypeEnum.Normal) && normalBackground.GetComponent<Image>().color.a == 1)
-        { 
-            if (currentDialogue.endOfScene && !transitioningScene)
+        {
+            if (currentDialogue.endOfScene)
             {
-                transitioningScene = true;
-                GameProgressionManager.TransitionScene(true);
+                if (GameProgressionManager.currentScene.Equals("RestaurantOverworld") && 
+                    (GameProgressionManager.sceneNumber == 1 || GameProgressionManager.sceneNumber == 3 || GameProgressionManager.sceneNumber == 5))
+                {
+                    GameProgressionManager.dialogueCanvas.SetActive(false);
+                    GameProgressionManager.currentlyTalking = false;
+                    finishedDialogue = false;
+                    dialogueIndex = -1;
+                    enabled = false;
+                }
+                else if (!transitioningScene)
+                {
+                    transitioningScene = true;
+                    GameProgressionManager.TransitionScene("play");
+                }
+                
             }
             else if (!currentDialogue.endOfScene && !typeWriterInEffect && !finishedDialogue && choiceBoxes.transform.childCount == 0) 
             {

@@ -1,0 +1,467 @@
+{
+    "dialogues": [
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "This looks great.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "It'll taste great, too. Go on, try.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "Mm.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "But first...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "(Agh, what is it this time!)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "Can we play a little game?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "If we play a round, will you be on your way after?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "Sure, if you want me to.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "Great, that'll work then. How do you play?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "It's simple. Just a photo contest. Whoever takes the better picture wins.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "You can go first.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG27",                
+                "dialogue": "Oh, okay.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG28",                
+                "dialogue": "And... there!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG28",                
+                "dialogue": "This turned out pretty good, if I do say so myself.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG28",                
+                "dialogue": "It does look good.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG29",                
+                "dialogue": "Well, it's my turn now.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG29",                
+                "dialogue": "Done.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG29",                
+                "dialogue": "...",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG29",                
+                "dialogue": "What are you doing?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG29",                
+                "dialogue": "Nothing. Just confirming something.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG29",                
+                "dialogue": "?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG29",                
+                "dialogue": "Oh, like whose photo was better? Nah, you gotta let me see that too.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG30",                
+                "dialogue": "You really are amazing after all.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG30",                
+                "dialogue": "Ehh... ? Where is this coming from?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG30",                
+                "dialogue": "(This guy must really love my cooking.)",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG31",                
+                "dialogue": "<color=#FFC0CB>Chef</color>, before I get on my way, may I request one more thing from you?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG31",                
+                "dialogue": "Really?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG31",                
+                "dialogue": "What is it?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG31",                
+                "dialogue": "Would you mind saying “buon appetito” to me?",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG31",                
+                "dialogue": "<color=green>Mateo</color>, you're cheesier than I thought! But sure, I guess.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG32",                
+                "dialogue":  "Buon appetito--",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Ravi",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG33",                
+                "dialogue":  "Mmph!",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1
+        },
+        {
+            "baseDialogue": {
+                "vnType": "Normal",
+                "character": "Mateo",
+                "npcSprite": [
+                    "Transparent"
+                ],
+                "bgSprite": "BG33",                
+                "dialogue":  "Mm, buon appetito indeed.",
+                "textSpeed": 0
+            },
+            "conditionalChoices": "",
+            "jumpToIndex": -1,
+            "endOfScene": true
+        }
+    ]
+}

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FloatEffect : MonoBehaviour
 {
+    [SerializeField]
     private float speed = 30f;
     private float amplitudeUp = 5f;
     private float amplitudeDown = 10f;

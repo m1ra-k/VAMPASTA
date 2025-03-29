@@ -5,32 +5,43 @@ public class PlayerMovement : MonoBehaviour
     public AnimationClip[] raviAnimations;
 
     private GameProgressionManager GameProgressionManager;
-    private float speed = 350f;
     private Rigidbody2D rb;
     private Vector2 movementVector;
     private Vector2 prevMovementVector;
     private Animator animator;
+
+    private Vector2 targetPosition;
+    private float stepSize = 100f;
+    private float moveSpeed = 300f;
+    private bool isMoving;
+    public LayerMask obstacleLayer;
 
     void Start()
     {
         GameProgressionManager = FindObjectOfType<GameProgressionManager>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        targetPosition = transform.position;
     }
 
     void Update()
     {
-        if (!GameProgressionManager.transitioning) {
-            movementVector.x = Input.GetAxisRaw("Horizontal");
-            movementVector.y = Input.GetAxisRaw("Vertical");
-
-            rb.velocity = movementVector.normalized * speed;
-        }
-
-        if (movementVector != prevMovementVector)
+        if (!GameProgressionManager.currentlyTalking && !GameProgressionManager.tutorialRestaurantOverworld.activeSelf)
         {
-            DetermineAnimation();
+            Move();
+
+            if (movementVector != prevMovementVector)
+            {
+                DetermineAnimation();
+            }  
         }
+
+        if (GameProgressionManager.currentlyTalking || GameProgressionManager.tutorialRestaurantOverworld.activeSelf)
+        {
+            movementVector = Vector2.zero;
+        }
+            
 
         if (movementVector == Vector2.zero)
         {
@@ -38,6 +49,46 @@ public class PlayerMovement : MonoBehaviour
         }
 
         prevMovementVector = movementVector;
+    }
+
+    void Move()
+    {
+        if (!isMoving)
+        {
+            movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+    
+
+            if (movementVector != Vector2.zero)
+            {
+                GameProgressionManager.facingUp = movementVector.x == 0 && movementVector.y == 1;
+                // print($"vector is {movementVector.x == 0 && movementVector.y == 1}");
+                // print($"gpm is {GameProgressionManager.facingUp}");
+
+                if (Mathf.Abs(movementVector.x) > Mathf.Abs(movementVector.y))
+                {
+                    movementVector.y = 0;
+                }
+                else
+                {
+                    movementVector.x = 0;
+                }
+
+                Vector2 nextPosition = (Vector2)transform.position + movementVector * stepSize;
+
+                if (!Physics2D.Raycast(transform.position, movementVector, 160f, obstacleLayer))
+                {
+                    targetPosition = nextPosition;
+                    isMoving = true;
+                }
+            }
+        }
+
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+        if ((Vector2)transform.position == targetPosition)
+        {
+            isMoving = false;
+        }
     }
 
     void DetermineAnimation()

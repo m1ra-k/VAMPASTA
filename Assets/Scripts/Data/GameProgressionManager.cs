@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,15 +11,34 @@ public class GameProgressionManager : MonoBehaviour
     public string currentScene;
 
     // Transition    
-    private FadeEffect fadeEffect;
-    private GameObject blackTransition;
+    public FadeEffect fadeEffect;
+    public GameObject blackTransition;
 
-    [Header("[Moment]")]
+    [Header("[State]")]
     public int sceneNumber;
-
-    [Header("[Player]")]
-    public GameObject ravi;
     public bool transitioning;
+    public string previousScene;
+
+    [Header("[Start Screen]")]
+    private Button playButton;
+    
+    [Header("[Restaurant Overworld]")]
+    public GameObject ravi;
+    public GameObject dialogueCanvas;
+    public GameObject tutorialRestaurantOverworld;
+    private DialogueSystemManager dialogueCanvasDialogueSystemManager;
+    public bool currentlyTalking;
+    public bool facingUp;
+    public bool finishedCurrentRound;
+
+    [Header("[Cooking Game]")]
+    private CookingGameManager cookingGameManager;
+
+    [Header("[Game Over]")]
+    public Button retryButton;
+
+    [Header("[End Screen]")]
+    public bool fadedInTheEnd;
 
     [Header("[Music]")]
     public List<AudioClip> audioClips = new List<AudioClip>();
@@ -34,11 +51,19 @@ public class GameProgressionManager : MonoBehaviour
     {    
         { 0, new List<string> { "VisualNovel", "vampasta_0_prologue" } },
         { 1, new List<string> { "RestaurantOverworld" } },
-        { 2, new List<string> { "VisualNovel", "vampasta_1_post_round" } },
+        { 2, new List<string> { "VisualNovel", "vampasta_1_post_first_round" } },
         { 3, new List<string> { "RestaurantOverworld" } },
-        { 4, new List<string> { "VisualNovel", "vampasta_2_post_round" } },
+        { 4, new List<string> { "VisualNovel", "vampasta_2_post_second_round" } },
         { 5, new List<string> { "RestaurantOverworld" } },
-        { 6, new List<string> { "VisualNovel", "vampasta_3_post_round" } }
+        { 6, new List<string> { "VisualNovel", "vampasta_3_post_third_round" } },
+        { 7, new List<string> { "EndScreen" } }
+    };
+
+    public Dictionary <int, List<string>> overworldDialogueLookup = new Dictionary<int, List<string>> 
+    {
+        { 1, new List<string> { "VisualNovel", "vampasta_1_before_first_round" } },
+        { 3, new List<string> { "VisualNovel", "vampasta_2_before_second_round" } },
+        { 5, new List<string> { "VisualNovel", "vampasta_3_before_third_round" } },
     };
 
     void Awake()
@@ -71,74 +96,199 @@ public class GameProgressionManager : MonoBehaviour
 
         fadeEffect.FadeOut(blackTransition, 1f);
 
+        transitioning = false;
+
         switch (currentScene)
         {
+            case "StartScreen":
+                playButton = GameObject.FindWithTag("Button").GetComponent<Button>();
+                break;
+
             case "RestaurantOverworld":
+                currentlyTalking = false;
                 ravi = GameObject.FindWithTag("Player");
+                dialogueCanvas = GameObject.FindWithTag("Dialogue");
+                tutorialRestaurantOverworld = GameObject.FindWithTag("Tutorial");
+                tutorialRestaurantOverworld.SetActive(false);
+                dialogueCanvasDialogueSystemManager = dialogueCanvas.GetComponentInChildren<DialogueSystemManager>();
+                dialogueCanvas.SetActive(false);
+                if (previousScene.Equals("CookingGame")) 
+                {
+                    ravi.transform.localPosition = new Vector2(-335, -65);
+                }
                 break;
 
             case "CookingGame":
-                transitioning = false;
+                cookingGameManager = FindObjectOfType<CookingGameManager>();
                 break;
-        }
-        
+
+            case "GameOver":
+                StopMusic();
+                retryButton = GameObject.FindWithTag("Button").GetComponent<Button>();
+                break;
+        }     
     }
 
     void Update()
     {
-        if (currentScene.Equals("RestaurantOverworld") && ravi.transform.position.x < 15)
-        {
-            TransitionScene();
+        if (!transitioning)
+        {   
+            if (currentScene.Equals("StartScreen"))
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    playButton.onClick.Invoke();
+                }
+            }
+            if (currentScene.Equals("RestaurantOverworld"))
+            {
+                // go to cooking game if ravi goes through door
+                if (ravi.transform.position.x < 15)
+                {
+                    TransitionScene();
+                    previousScene = "RestaurantOverworld";
+                }
+                else if (!currentlyTalking)
+                {
+                    // facing correct direction (up)
+                    if (facingUp && Input.GetKeyDown(KeyCode.Space))
+                    {
+                        // mateo is talkable
+                        // TODO ... PREVENTING MOVEMENT
+                        if (ravi.transform.position == new Vector3(365, 395, 0) && !currentlyTalking)
+                        {
+                            currentlyTalking = true;
+                            dialogueCanvasDialogueSystemManager.enabled = true;
+                            dialogueCanvas.SetActive(true);
+                        }
+                        // plate is settable
+                        else if (ravi.transform.position == new Vector3(465, 395, 0) && finishedCurrentRound)
+                        {
+                            currentlyTalking = true;
+                            finishedCurrentRound = false;
+                            TransitionScene("play");
+                            previousScene = "VisualNovel";
+                        }
+                    }
+                    else if (Input.GetKeyDown(KeyCode.Escape))
+                    {
+                        tutorialRestaurantOverworld.SetActive(!tutorialRestaurantOverworld.activeSelf);
+                    }
+                }        
+            }
+            else if (currentScene.Equals("CookingGame"))
+            {
+                if (cookingGameManager.hearts.Count == 0)
+                {
+                    TransitionScene("lost");
+                    previousScene = "CookingGame";
+                }
+                else if (cookingGameManager.finishedCooking)
+                {
+                    finishedCurrentRound = true;
+                    TransitionScene();
+                    previousScene = "CookingGame";
+                }
+            }
+            else if (currentScene.Equals("GameOver"))
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    retryButton.onClick.Invoke();
+                }
+            }
+            else if (currentScene.Equals("EndScreen"))
+            {
+                if (!fadedInTheEnd)
+                {
+                    fadedInTheEnd = true;
+                    fadeEffect.FadeIn(GameObject.FindWithTag("Fade"), fadeTime: 2f, fadeDelay: 2f);
+                }
+            }
         }
-
     }
 
     // TODO get rid of flag soon
-    public void TransitionScene(bool possibleFlag = false)
+    public void TransitionScene(string possibleFlag = "")
     {
         string sceneType = "";
 
         // not true always tho hmm
-        if (possibleFlag)
+        if (possibleFlag.Equals("play"))
         {
             sceneNumber += 1;
             sceneType = sceneProgressionLookup[sceneNumber][0];
+        }
+        else if (possibleFlag.Equals("lost"))
+        {
+            sceneType = "GameOver";
+        }
+        else if (possibleFlag.Equals("retry"))
+        {
+            fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "CookingGame");
+            transitioning = true;
+            return;
         }
         else
         {
             sceneType = currentScene.Equals("RestaurantOverworld") ? "CookingGame" : "RestaurantOverworld";
         }
         
+        string nextSceneVisualNovelJSONFileName = "";
+
         switch (sceneType)
         {
             case "VisualNovel":
-                string nextSceneVisualNovelJSONFileName = sceneProgressionLookup[sceneNumber][1];
+                nextSceneVisualNovelJSONFileName = sceneProgressionLookup[sceneNumber][1];
                 nextSceneVisualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{nextSceneVisualNovelJSONFileName}");
 
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "VisualNovel");
-                StartCoroutine(PlayMusic(1));
+                transitioning = true;
+                if (sceneNumber == 0)
+                {
+                    StartCoroutine(PlayMusic(1)); 
+                }
                 break;
                 
-            // TODO? focus on VisualNovel for now
             case "RestaurantOverworld":
+                nextSceneVisualNovelJSONFileName = overworldDialogueLookup[sceneNumber][1];
+                nextSceneVisualNovelJSONFile = Resources.Load<TextAsset>($"Dialogue/{nextSceneVisualNovelJSONFileName}");
+
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "RestaurantOverworld");
-                StartCoroutine(PlayMusic(0));
+                transitioning = true;
+                audioSourceBGM.loop = true;
+                if (currentTrack != 0)
+                {
+                    StartCoroutine(PlayMusic(0));
+                }
                 break;
 
             case "CookingGame":
                 fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "CookingGame");
                 transitioning = true;
-                StartCoroutine(PlayMusic(2));
+                StopMusic();
+                break;
+
+            case "GameOver":
+                fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "GameOver");
+                transitioning = true;
+                StopMusic();
+                break;
+
+            case "EndScreen":
+                fadeEffect.FadeIn(blackTransition, fadeTime: 0.5f, scene: "EndScreen");
+                transitioning = true;
                 break;
         }
     }
 
     public void StopMusic()
     {
-        audioSourceBGM.Pause();
+        audioSourceBGM.Stop();
+        currentTrack = -1;
     }
 
-    IEnumerator PlayMusic(int index)
+    public IEnumerator PlayMusic(int index, float waitTime = 0.5f, GameObject gameObjectToDeactivate = null, float cookingGameWaitTime = 0f)
     {
         float startVolume = audioSourceBGM.volume;
 
@@ -151,10 +301,17 @@ public class GameProgressionManager : MonoBehaviour
         audioSourceBGM.volume = 0;
         audioSourceBGM.Pause();
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(waitTime);
+
+        if (gameObjectToDeactivate)
+        {
+            gameObjectToDeactivate.SetActive(false);
+        }
 
         audioSourceBGM.volume = 1;
         audioSourceBGM.UnPause();
+
+        yield return new WaitForSeconds(cookingGameWaitTime);
 
         if (index != currentTrack)
         {
@@ -168,6 +325,6 @@ public class GameProgressionManager : MonoBehaviour
     // BUTTONS - TODO MOVE
     public void PlayGame()
     {
-        TransitionScene(true);
-    }
+        TransitionScene("play");
+    }   
 }
