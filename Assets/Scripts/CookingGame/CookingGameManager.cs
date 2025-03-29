@@ -115,7 +115,7 @@ public class CookingGameManager : MonoBehaviour
                 frameCount++;
 
                 int waitFrames = beatmapList[beatmapListIndex][0].Item2;
-                print($"frame count current: {frameCount}; waiting for this many frames: {waitFrames}");
+                // print($"frame count current: {frameCount}; waiting for this many frames: {waitFrames}");
 
                 if (frameCount == waitFrames)
                 {
