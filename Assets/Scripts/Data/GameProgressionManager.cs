@@ -26,6 +26,7 @@ public class GameProgressionManager : MonoBehaviour
     [Header("[Restaurant Overworld]")]
     public GameObject ravi;
     public GameObject dialogueCanvas;
+    public GameObject tutorialRestaurantOverworld;
     private DialogueSystemManager dialogueCanvasDialogueSystemManager;
     public bool currentlyTalking;
     public bool facingUp;
@@ -108,6 +109,8 @@ public class GameProgressionManager : MonoBehaviour
                 currentlyTalking = false;
                 ravi = GameObject.FindWithTag("Player");
                 dialogueCanvas = GameObject.FindWithTag("Dialogue");
+                tutorialRestaurantOverworld = GameObject.FindWithTag("Tutorial");
+                tutorialRestaurantOverworld.SetActive(false);
                 dialogueCanvasDialogueSystemManager = dialogueCanvas.GetComponentInChildren<DialogueSystemManager>();
                 dialogueCanvas.SetActive(false);
                 if (previousScene.Equals("CookingGame")) 
@@ -146,27 +149,33 @@ public class GameProgressionManager : MonoBehaviour
                     TransitionScene();
                     previousScene = "RestaurantOverworld";
                 }
-                // facing correct direction (up)
-                else if (facingUp && Input.GetKeyDown(KeyCode.Space) && !currentlyTalking)
+                else if (!currentlyTalking)
                 {
-                    // mateo is talkable
-                    // TODO ... PREVENTING MOVEMENT
-                    if (ravi.transform.position == new Vector3(365, 395, 0) && !currentlyTalking)
+                    // facing correct direction (up)
+                    if (facingUp && Input.GetKeyDown(KeyCode.Space))
                     {
-                        currentlyTalking = true;
-                        dialogueCanvasDialogueSystemManager.enabled = true;
-                        dialogueCanvas.SetActive(true);
+                        // mateo is talkable
+                        // TODO ... PREVENTING MOVEMENT
+                        if (ravi.transform.position == new Vector3(365, 395, 0) && !currentlyTalking)
+                        {
+                            currentlyTalking = true;
+                            dialogueCanvasDialogueSystemManager.enabled = true;
+                            dialogueCanvas.SetActive(true);
+                        }
+                        // plate is settable
+                        else if (ravi.transform.position == new Vector3(465, 395, 0) && finishedCurrentRound)
+                        {
+                            currentlyTalking = true;
+                            finishedCurrentRound = false;
+                            TransitionScene("play");
+                            previousScene = "VisualNovel";
+                        }
                     }
-                    // plate is settable
-                    else if (ravi.transform.position == new Vector3(465, 395, 0) && finishedCurrentRound)
+                    else if (Input.GetKeyDown(KeyCode.Escape))
                     {
-                        currentlyTalking = true;
-                        finishedCurrentRound = false;
-                        TransitionScene("play");
-                        previousScene = "VisualNovel";
+                        tutorialRestaurantOverworld.SetActive(!tutorialRestaurantOverworld.activeSelf);
                     }
-                }
-                
+                }        
             }
             else if (currentScene.Equals("CookingGame"))
             {

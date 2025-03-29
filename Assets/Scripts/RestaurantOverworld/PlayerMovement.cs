@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (!GameProgressionManager.currentlyTalking)
+        if (!GameProgressionManager.currentlyTalking && !GameProgressionManager.tutorialRestaurantOverworld.activeSelf)
         {
             Move();
 
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
             }  
         }
 
-        if (GameProgressionManager.currentlyTalking)
+        if (GameProgressionManager.currentlyTalking || GameProgressionManager.tutorialRestaurantOverworld.activeSelf)
         {
             movementVector = Vector2.zero;
         }
