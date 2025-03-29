@@ -56,6 +56,7 @@ public class HitCircleBehavior : MonoBehaviour
         {
             GameObject missed = approachCirclesQueue.Dequeue();
             // print($"due to too low: missed {missed.name}");
+            StartCoroutine(cookingGameManager.RaviHurt());
             updateHitJudgementCoroutine = StartCoroutine(UpdateHitJudgement("miss"));
             RemoveHeart();
             closestChildTransform = null;
@@ -78,6 +79,7 @@ public class HitCircleBehavior : MonoBehaviour
         else
         {
             // print($"due to early press: missed {got.name} at {got.transform.position.y}");
+            StartCoroutine(cookingGameManager.RaviHurt());
             updateHitJudgementCoroutine = StartCoroutine(UpdateHitJudgement("miss"));
             RemoveHeart();
         }

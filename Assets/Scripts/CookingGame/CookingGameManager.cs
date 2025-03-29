@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CookingGameManager : MonoBehaviour
 {    
@@ -43,6 +44,9 @@ public class CookingGameManager : MonoBehaviour
     public Queue<GameObject> approachCircleFoodQueue = new Queue<GameObject>();
     public Queue<GameObject> approachCircleGarlicQueue = new Queue<GameObject>();
     public List<GameObject> hearts;
+
+    public Image cookingRavi;
+    public List<Sprite> cookingRaviReactions;
 
     void Awake()
     {
@@ -160,5 +164,17 @@ public class CookingGameManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         finishedCooking = true;
+    }
+
+    // todo: animation eventually?
+    public IEnumerator RaviHurt()
+    {
+        print("ravi hurt");
+
+        cookingRavi.sprite = cookingRaviReactions[1];
+
+        yield return new WaitForSeconds(0.25f);
+
+        cookingRavi.sprite = cookingRaviReactions[0];
     }
 }

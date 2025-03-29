@@ -415,6 +415,10 @@ MonoBehaviour:
   - {fileID: 1307352596}
   - {fileID: 584097759}
   - {fileID: 1323042667}
+  cookingRavi: {fileID: 789516791}
+  cookingRaviReactions:
+  - {fileID: 21300000, guid: 42ccfa43d42616741b403d1058981724, type: 3}
+  - {fileID: 21300000, guid: cd42056cee16a5245b7392a84a381340, type: 3}
 --- !u!4 &257595769
 Transform:
   m_ObjectHideFlags: 0
