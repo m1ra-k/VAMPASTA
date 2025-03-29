@@ -33,11 +33,9 @@ public class CookingGameManager : MonoBehaviour
     [SerializeField]
     private TextAsset[] beatmapFiles;
     [SerializeField]
-    private List<List<ApproachCircleTypeEnum?>> beatmapList = new List<List<ApproachCircleTypeEnum?>>();
+    private List<List<(ApproachCircleTypeEnum?, int)>> beatmapList = new List<List<(ApproachCircleTypeEnum?, int)>>();
     [SerializeField]
-    private int frameCount = 51;
-    [SerializeField]
-    private int framesToWait = 52;
+    private int frameCount = 0;
     [SerializeField]
     private int beatmapListIndex;
 
@@ -58,7 +56,7 @@ public class CookingGameManager : MonoBehaviour
 
         for (int i = 0; i < lines.Length; i++)
         {
-            List<ApproachCircleTypeEnum?> beatsForFrameList = new List<ApproachCircleTypeEnum?>();
+            List<(ApproachCircleTypeEnum?, int)> beatsForFrameList = new List<(ApproachCircleTypeEnum?, int)>();
            
             if (lines[i].Length > 1)
             {
@@ -66,17 +64,19 @@ public class CookingGameManager : MonoBehaviour
 
                 foreach (string beatForFrame in beatsForFrame)
                 {
-                    approachCircleTypeEnum = beatForFrame.Trim().Equals("Food") ? ApproachCircleTypeEnum.Food : ApproachCircleTypeEnum.Garlic;
+                    string[] eachBeat = beatForFrame.Split(",");
 
-                    beatsForFrameList.Add(approachCircleTypeEnum);
+                    approachCircleTypeEnum = eachBeat[0].Trim().Equals("Food") ? ApproachCircleTypeEnum.Food : ApproachCircleTypeEnum.Garlic;
+
+                    beatsForFrameList.Add((approachCircleTypeEnum, int.Parse(eachBeat[1])));
                 }
 
                 beatmapList.Add(beatsForFrameList);
             }
-            else
-            {
-                beatmapList.Add(new List<ApproachCircleTypeEnum?> { ApproachCircleTypeEnum.Skip });
-            }
+            // else
+            // {
+            //     beatmapList.Add(new List<ApproachCircleTypeEnum?> { ApproachCircleTypeEnum.Skip });
+            // }
         }
     }
 
@@ -103,7 +103,8 @@ public class CookingGameManager : MonoBehaviour
                 playingCookingGame = true;
                 countdown.SetActive(true);
                 // allow for a 4 second countdown
-                StartCoroutine(GameProgressionManager.PlayMusic(2, 3.75f, countdown));
+                GameProgressionManager.StopMusic();
+                StartCoroutine(GameProgressionManager.PlayMusic(2, 3.75f, countdown, 2f));
                 GameProgressionManager.audioSourceBGM.loop = false;
             }
         }
@@ -113,11 +114,14 @@ public class CookingGameManager : MonoBehaviour
             {
                 frameCount++;
 
-                if (frameCount == framesToWait)
+                int waitFrames = beatmapList[beatmapListIndex][0].Item2;
+                print($"frame count current: {frameCount}; waiting for this many frames: {waitFrames}");
+
+                if (frameCount == waitFrames)
                 {
                     foreach (var approachCircle in beatmapList[beatmapListIndex])
                     {
-                        GenerateApproachCircle(approachCircle.Value);
+                        GenerateApproachCircle(approachCircle.Item1.Value);
                     }
                     
                     frameCount = 0;
@@ -157,11 +161,11 @@ public class CookingGameManager : MonoBehaviour
     
     private IEnumerator DisplayDone()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
 
         done.SetActive(true);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(30f);
 
         finishedCooking = true;
     }

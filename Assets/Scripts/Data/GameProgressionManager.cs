@@ -289,7 +289,7 @@ public class GameProgressionManager : MonoBehaviour
         currentTrack = -1;
     }
 
-    public IEnumerator PlayMusic(int index, float waitTime = 0.5f, GameObject gameObjectToDeactivate = null)
+    public IEnumerator PlayMusic(int index, float waitTime = 0.5f, GameObject gameObjectToDeactivate = null, float cookingGameWaitTime = 0f)
     {
         float startVolume = audioSourceBGM.volume;
 
@@ -311,6 +311,8 @@ public class GameProgressionManager : MonoBehaviour
 
         audioSourceBGM.volume = 1;
         audioSourceBGM.UnPause();
+
+        yield return new WaitForSeconds(cookingGameWaitTime);
 
         if (index != currentTrack)
         {

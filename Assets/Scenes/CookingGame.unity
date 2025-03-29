@@ -406,8 +406,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 2354351c226caca48968c30bc8661d82, type: 3}
   - {fileID: 4900000, guid: e357c90bb4496c84f8032f9aec7f92c0, type: 3}
   - {fileID: 4900000, guid: e6a3ae262b134df45bbd6ca67a8af2ad, type: 3}
-  frameCount: 51
-  framesToWait: 52
+  frameCount: 0
   beatmapListIndex: 0
   hearts:
   - {fileID: 489320732}
