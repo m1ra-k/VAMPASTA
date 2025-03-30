@@ -18,6 +18,7 @@ public enum BGSpriteEnum // ADD TO SPRITE CACHE
     BG14,
     BG15,
     BG16,
+    BG162,
     BG17,
     BG18,
     BG19,
