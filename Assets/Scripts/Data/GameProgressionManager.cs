@@ -26,6 +26,7 @@ public class GameProgressionManager : MonoBehaviour
     public GameObject ravi;
     public GameObject dialogueCanvas;
     public GameObject tutorialRestaurantOverworld;
+    public GameObject hiddenWall;
     private DialogueSystemManager dialogueCanvasDialogueSystemManager;
     public bool currentlyTalking;
     public bool facingUp;
@@ -110,8 +111,11 @@ public class GameProgressionManager : MonoBehaviour
                 dialogueCanvas = GameObject.FindWithTag("Dialogue");
                 tutorialRestaurantOverworld = GameObject.FindWithTag("Tutorial");
                 tutorialRestaurantOverworld.SetActive(false);
+                hiddenWall = GameObject.FindWithTag("Hidden");
+                hiddenWall.SetActive(false);
                 dialogueCanvasDialogueSystemManager = dialogueCanvas.GetComponentInChildren<DialogueSystemManager>();
                 dialogueCanvas.SetActive(false);
+                hiddenWall.SetActive(finishedCurrentRound);
                 if (previousScene.Equals("CookingGame")) 
                 {
                     ravi.transform.localPosition = new Vector2(-335, -65);
