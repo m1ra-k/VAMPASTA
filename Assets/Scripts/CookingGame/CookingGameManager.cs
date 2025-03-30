@@ -173,8 +173,6 @@ public class CookingGameManager : MonoBehaviour
     // todo: animation eventually?
     public IEnumerator RaviHurt()
     {
-        print("ravi hurt");
-
         cookingRavi.sprite = cookingRaviReactions[1];
 
         yield return new WaitForSeconds(0.25f);
