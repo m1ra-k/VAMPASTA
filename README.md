@@ -2,7 +2,7 @@
 
 ## Play!
 
-You can play the WebGL build of *VAMPASTA!* at this [link](https://m1ra-k.github.io/play-VAMPASTA/)! (TODO) You may need to zoom in/out because the required sizing in browser is weird at the moment, sorry! Playing the build may be better, make sure to set the screen size to 800x720 though.
+You can play the WebGL build of *VAMPASTA!* at this [link](https://m1ra-k.github.io/play-VAMPASTA/)! You may need to zoom in/out because the required sizing in browser is weird at the moment, sorry (80% seems right)! Playing the build may be better, make sure to set the screen size to 800x720 though.
 
 ## Unity Editor Version
 
