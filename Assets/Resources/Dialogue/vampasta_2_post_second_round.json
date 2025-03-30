@@ -330,7 +330,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG24",                
-                "dialogue": "There's lots of <i>food</i> in front of you, and you seem hungry, so why not take a bite?",
+                "dialogue": "There's lots of food in front of you, and you seem hungry, so why not take a bite?",
                 "textSpeed": 0
             },
             "conditionalChoices": "",

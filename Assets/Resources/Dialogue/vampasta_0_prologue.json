@@ -1085,7 +1085,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "Did I get dumped?",
                 "textSpeed": 0
             },
@@ -1099,7 +1099,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(I don't have any memory of what happened after that night.)",
                 "textSpeed": 0
             },
@@ -1113,7 +1113,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(I passed out from impact, and the next time I woke up, I was in my bed.)",
                 "textSpeed": 0
             },
@@ -1127,7 +1127,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(It's been a couple of days, and I still haven't heard back from <color=red>Lan</color>.)",
                 "textSpeed": 0
             },
@@ -1141,7 +1141,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(I should have injuries from where I got hit but... it's all gone.)",
                 "textSpeed": 0
             },
@@ -1155,7 +1155,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "God, I really can't believe this is happening.",
                 "textSpeed": 0
             },
@@ -1169,7 +1169,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(So my girlfriend. Ex-girlfriend? Was actually a vampire.)",
                 "textSpeed": 0
             },
@@ -1183,7 +1183,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(And after seeing me covered in blood, she bit me.)",
                 "textSpeed": 0
             },
@@ -1197,7 +1197,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(Which I guess makes me a vampire too?)",
                 "textSpeed": 0
             },
@@ -1211,7 +1211,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(I just can't believe I haven't noticed up until this point.)",
                 "textSpeed": 0
             },
@@ -1225,7 +1225,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(I didn't take <color=red>Lan</color> as a good actress.)",
                 "textSpeed": 0
             },
@@ -1239,7 +1239,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(Hell, she could barely lie when she tried surprising me for our anniversary.)",
                 "textSpeed": 0
             },
@@ -1253,7 +1253,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(But I guess this whole time we were dating... was all just one big act.)",
                 "textSpeed": 0
             },
@@ -1267,7 +1267,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(...)",
                 "textSpeed": 0
             },
@@ -1281,7 +1281,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(Did she really love me?)",
                 "textSpeed": 0
             },
@@ -1295,7 +1295,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "My head just can't keep up.",
                 "textSpeed": 0
             },
@@ -1309,7 +1309,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "Whatever, there's no point in... thinking about that now.",
                 "textSpeed": 0
             },
@@ -1323,7 +1323,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "I need to focus on what's next.",
                 "textSpeed": 0
             },
@@ -1337,7 +1337,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "I don't even have a reflection... I really am a vampire now, huh?",
                 "textSpeed": 0
             },
@@ -1351,7 +1351,7 @@
                 "npcSprite": [
                     "Transparent"
                 ],
-                "bgSprite": "BG16",
+                "bgSprite": "BG162",
                 "dialogue": "(This is all so surreal.)",
                 "textSpeed": 0
             },
