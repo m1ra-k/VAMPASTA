@@ -344,7 +344,7 @@
                     "Transparent"
                 ],
                 "bgSprite": "BG22",                
-                "dialogue": "Feels like you know a lot about me, but I know relatively <i>niente</i> about you.",
+                "dialogue": "Feels like you know a lot about me, but I know relatively niente about you.",
                 "textSpeed": 0
             },
             "conditionalChoices": "",

@@ -1124,7 +1124,7 @@ PrefabInstance:
         <b>f:</b> incorporate the food!
 
         <b>g:</b>
-        incorpate (and dodge) the garlic!'
+        incorporate (and dodge) the garlic!'
       objectReference: {fileID: 0}
     - target: {fileID: 7205222632276262689, guid: 33c4f8063a9383a4bba90f68915e6525, type: 3}
       propertyPath: m_Pivot.x
